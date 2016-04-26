@@ -1,0 +1,187 @@
+@charset "utf-8";
+@import "lib/common";
+
+.tags-list{
+	float: left;
+	margin-right: 0.5rem;
+	li{
+		float: left;
+	    padding: 0.1rem;
+	    border-radius: 0.1rem;
+	    text-align: center;
+		font-size: 0.45rem;
+		&:nth-child(1){
+			margin-right: 0.5rem;
+		}
+	}
+}
+.current-tag{
+	line-height: 2rem;
+    border-bottom: solid 1px #f0f0f0;
+    padding: 0 0.75rem;
+    background: $deep-blue;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 200;
+    &:after{
+    	content: '';
+        background: url('../images/icon/icon-down.png') center no-repeat;
+        background-size: 100%;
+	    position: absolute;
+	    top: 0.7rem;
+	    right: 0.75rem;
+	    width: 0.7rem;
+	    height: 0.7rem;
+    }
+}
+/*travel-list start*/
+.travel-list{
+	background: #e4e4e4;
+	.travel-item{
+		padding: 0.5rem 0.75rem;
+		border-bottom: 1px solid #f0f0f0;
+		background: #fff;
+		&:last-child{
+			border: 0;
+		}
+	}
+	.travel-main{
+		overflow: hidden;
+		.travel-img{
+			float: left;
+		    width: 30%;
+		    height: 3rem;
+		    margin-right: 0.5rem;
+		    img{
+		    	width: 100%;
+		    }
+		}
+		.travel-title,.travel-time-num{
+			float: left;
+			width: 66%;
+		}
+		.travel-title{ 
+			line-height: 1rem; 
+			font-size: 0.8rem;
+			font-weight: bold;
+			a{
+				color: #000;
+			}
+		}
+		.travel-time-num{
+			color: $con-gray;
+			font-size: 0.6rem;
+			.travel-time{ float: left; }
+			.travel-num{ float: right; }
+			li{
+    			@include active-tag;
+    		}
+		}
+	}
+}
+/*travel-list end*/
+/*filter start*/
+.filter{
+	position: fixed;
+    top: 0;
+    height: 0;
+    overflow: hidden;
+    background: #fff;
+	.head-title,.filter-tag{
+		line-height: 2rem;
+	    background: $deep-blue;
+	    color: #fff;
+	}
+	.head-title{ 
+		position: relative;
+	    text-align: center;
+	    font-size: 0.75rem;
+	    &:before{
+	        content: '';
+	        background: url('../images/icon/icon-close-white.png') no-repeat;
+	        background-size: 100%;
+		    position: absolute;
+		    top: 33%;
+		    left: 0.75rem;
+		    width: 0.6rem;
+		    height: 0.6rem;
+	    }
+	}
+	.filter-tag{
+		padding: 0 0.75rem;
+		font-size: 0.7rem;
+	}
+	.selected{
+		overflow: hidden;
+	    line-height: 2rem;
+	    border-bottom: solid 1px #f0f0f0;
+	    padding: 0 0.75rem;
+	    margin-bottom: 0.75rem;
+		font-size: 0.7rem;
+		.selected-theme{
+			float: left;
+			color: $deep-blue;
+		}
+		.selected-tag{
+			position: relative;
+			float: right;
+			padding-right: 0.75rem;
+			a{
+				color: #666;
+			}
+			&:after{
+		        content: '';
+		        background: url('../images/icon/icon-right-more.png') no-repeat;
+		        background-size: 100%;
+			    position: absolute;
+			    top: 33%;
+			    right: 0;
+			    width: 0.5rem;
+			    height: 0.8rem;
+		    }
+		}
+	}
+	.total{
+		position: relative;
+		width: 92%;
+		margin: 0 auto;
+		line-height: 2rem;
+		border-radius: 0.1rem;
+		background: #2878db;
+		font-size: 0.8rem;
+		text-align: center;
+		color: #f8f8f8;
+		&:after{
+	        content: '';
+	        background: url('../images/icon/icon-right-white.png') no-repeat;
+	        background-size: 100%;
+		    position: absolute;
+		    top: 33%;
+		    right: 5rem;
+		    width: 0.5rem;
+		    height: 0.8rem;
+	    }
+	}
+	.tags-box{
+		overflow: hidden;
+		padding: 0 0.75rem 0.75rem;
+		.tags-title{
+			@include tag-tit;
+		}
+		.tags-list{
+			width: 100%;
+			.tag{
+				float: left;
+			    margin: 0.5rem 0.5rem 0 0;
+			    @include tag;
+			    a{
+			    	@include tag;
+			    }
+			}
+			.active-tag{
+				@include active-tag;
+			}
+		}
+	}
+}
+/*filter end*/

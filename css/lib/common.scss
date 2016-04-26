@@ -1,0 +1,20 @@
+@charset "utf-8";
+@import "lib/reset";
+@import "mixin";
+$light-blue: #1ab2ea;
+$orange: #ffb523;
+$green: #45c186;
+$red: #ff545a;
+$deep-blue: #4680d1;
+$border-gray: #e6e7e9;
+$tit-gray: #666666;
+$con-gray: #999999;
+$bac-gray: #f8f8f8;
+
+.wrap{
+	width: 100%;
+    @include box-sizing;
+
+	//文章列表
+    
+}

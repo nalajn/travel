@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "lib/reset.css";
+@import "lib/common";
+
+.wrap{
+	padding: 0.75rem;
+	.title{
+		@include tag-tit;
+		margin-bottom: 0.5rem;
+	}
+	.opinion-area{
+		width: 100%;
+    	min-height: 25rem;
+    	@include box-sizing;
+    	outline:none;
+		word-break: break-all;
+		font-size: 0.7rem;
+	}
+}

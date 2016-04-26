@@ -1,0 +1,282 @@
+@charset "UTF-8";
+html {
+  font-size: 20px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight: transparent;
+  -webkit-text-size-adjust: none;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased; }
+
+/*body {font-size: 0.75em;}*/
+label {
+  cursor: pointer; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+input:focus {
+  outline: none; }
+
+input, button, select, textarea {
+  outline: none;
+  /*-webkit-appearance:none;*/
+  /*强制去除表单自带的样式*/ }
+
+textarea {
+  resize: none;
+  /*-webkit-appearance:none;*/
+  /*强制去除textarea自带的样式*/ }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset; }
+
+/*利用阴影来填充掉input自动填充色*/
+textarea, input, select {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var {
+  margin: 0;
+  padding: 0; }
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+  display: block; }
+
+/*html5设置*/
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub {
+  font-size: 1em; }
+
+body, input, button, select, textarea, sub {
+  font-family: Arial, sans-serif; }
+
+em, cite, address, optgroup {
+  font-style: normal; }
+
+kbd, samp, code {
+  font-family: monospace; }
+
+img, input, button, select, textarea {
+  vertical-align: middle;
+  outline: none; }
+
+ul, ol {
+  list-style: none; }
+
+img, fieldset {
+  border: 0; }
+
+abbr, acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000; }
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border: 0; }
+
+table th, table td {
+  border: 0; }
+
+legend, hr {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/*legend,hr,caption {visibility: hidden;font-size: 0;width: 0;height: 0;line-height: 0;}*/
+.hidden {
+  display: none; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both; }
+
+a {
+  outline: none; }
+
+.wrap {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.tags-list {
+  float: left;
+  margin-right: 0.5rem; }
+  .tags-list li {
+    float: left;
+    padding: 0.1rem;
+    border-radius: 0.1rem;
+    text-align: center;
+    font-size: 0.45rem; }
+    .tags-list li:nth-child(1) {
+      margin-right: 0.5rem; }
+
+.current-tag {
+  line-height: 2rem;
+  border-bottom: solid 1px #f0f0f0;
+  padding: 0 0.75rem;
+  background: #4680d1;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 200; }
+  .current-tag:after {
+    content: '';
+    background: url("../images/icon/icon-down.png") center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.7rem;
+    right: 0.75rem;
+    width: 0.7rem;
+    height: 0.7rem; }
+
+/*travel-list start*/
+.travel-list {
+  background: #e4e4e4; }
+  .travel-list .travel-item {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff; }
+    .travel-list .travel-item:last-child {
+      border: 0; }
+  .travel-list .travel-main {
+    overflow: hidden; }
+    .travel-list .travel-main .travel-img {
+      float: left;
+      width: 30%;
+      height: 3rem;
+      margin-right: 0.5rem; }
+      .travel-list .travel-main .travel-img img {
+        width: 100%; }
+    .travel-list .travel-main .travel-title, .travel-list .travel-main .travel-time-num {
+      float: left;
+      width: 66%; }
+    .travel-list .travel-main .travel-title {
+      line-height: 1rem;
+      font-size: 0.8rem;
+      font-weight: bold; }
+      .travel-list .travel-main .travel-title a {
+        color: #000; }
+    .travel-list .travel-main .travel-time-num {
+      color: #999999;
+      font-size: 0.6rem; }
+      .travel-list .travel-main .travel-time-num .travel-time {
+        float: left; }
+      .travel-list .travel-main .travel-time-num .travel-num {
+        float: right; }
+      .travel-list .travel-main .travel-time-num li {
+        border: solid 1px #2878db;
+        background: #f6f9ff;
+        color: #2878db; }
+
+/*travel-list end*/
+/*filter start*/
+.filter {
+  position: fixed;
+  top: 0;
+  height: 0;
+  overflow: hidden;
+  background: #fff; }
+  .filter .head-title, .filter .filter-tag {
+    line-height: 2rem;
+    background: #4680d1;
+    color: #fff; }
+  .filter .head-title {
+    position: relative;
+    text-align: center;
+    font-size: 0.75rem; }
+    .filter .head-title:before {
+      content: '';
+      background: url("../images/icon/icon-close-white.png") no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 33%;
+      left: 0.75rem;
+      width: 0.6rem;
+      height: 0.6rem; }
+  .filter .filter-tag {
+    padding: 0 0.75rem;
+    font-size: 0.7rem; }
+  .filter .selected {
+    overflow: hidden;
+    line-height: 2rem;
+    border-bottom: solid 1px #f0f0f0;
+    padding: 0 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.7rem; }
+    .filter .selected .selected-theme {
+      float: left;
+      color: #4680d1; }
+    .filter .selected .selected-tag {
+      position: relative;
+      float: right;
+      padding-right: 0.75rem; }
+      .filter .selected .selected-tag a {
+        color: #666; }
+      .filter .selected .selected-tag:after {
+        content: '';
+        background: url("../images/icon/icon-right-more.png") no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 33%;
+        right: 0;
+        width: 0.5rem;
+        height: 0.8rem; }
+  .filter .total {
+    position: relative;
+    width: 92%;
+    margin: 0 auto;
+    line-height: 2rem;
+    border-radius: 0.1rem;
+    background: #2878db;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #f8f8f8; }
+    .filter .total:after {
+      content: '';
+      background: url("../images/icon/icon-right-white.png") no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 33%;
+      right: 5rem;
+      width: 0.5rem;
+      height: 0.8rem; }
+  .filter .tags-box {
+    overflow: hidden;
+    padding: 0 0.75rem 0.75rem; }
+    .filter .tags-box .tags-title {
+      font-size: 0.7rem;
+      color: #333; }
+    .filter .tags-box .tags-list {
+      width: 100%; }
+      .filter .tags-box .tags-list .tag {
+        float: left;
+        margin: 0.5rem 0.5rem 0 0;
+        line-height: 0.8rem;
+        margin-right: 0.5rem;
+        padding: 0.2rem 0.4rem;
+        border: solid 1px #f0f0f0;
+        border-radius: 0.1rem;
+        background: #fff;
+        font-size: 0.7rem;
+        color: #666; }
+        .filter .tags-box .tags-list .tag a {
+          line-height: 0.8rem;
+          margin-right: 0.5rem;
+          padding: 0.2rem 0.4rem;
+          border: solid 1px #f0f0f0;
+          border-radius: 0.1rem;
+          background: #fff;
+          font-size: 0.7rem;
+          color: #666; }
+      .filter .tags-box .tags-list .active-tag {
+        border: solid 1px #2878db;
+        background: #f6f9ff;
+        color: #2878db; }
+
+/*filter end*/

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@mixin box-sizing{
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box; 
+			box-sizing:border-box;
+}
+
+@mixin tag-tit{
+	font-size: 0.7rem;
+  	color: #333;
+}
+@mixin tag{
+	line-height: 0.8rem;
+	margin-right: 0.5rem;
+	padding: 0.2rem 0.4rem;
+	border: solid 1px #f0f0f0;
+	border-radius: 0.1rem;
+	background: #fff;
+	font-size: 0.7rem;
+	color: #666;
+}
+
+@mixin active-tag{
+	border: solid 1px #2878db;
+	background: #f6f9ff;
+	color: #2878db;
+}

@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import "lib/reset.css";
+@import "lib/common.scss";
+
+.wrap{
+    background: #f8f8f8;
+}
+.head-title{
+	position: relative;
+	display: block;
+  	padding: 0.5rem 0.75rem;
+    border-bottom: solid 1px #f0f0f0;
+    background: $deep-blue;
+	font-size: 0.8rem;
+    text-align: center;
+    color: #fff;
+	&:before{
+        content: '';
+        background: url('../images/icon/icon-close-white.png') no-repeat;
+        background-size: 100%;
+	    position: absolute;
+	    top: 33%;
+	    left: 0.75rem;
+	    width: 0.6rem;
+	    height: 0.6rem;
+    }
+}
+.tags-box{
+	overflow: hidden;
+	padding: 0.5rem 0.75rem;
+	.tag{
+		float: left;
+	    margin-top: 0.5rem;
+	    a{
+	    	@include tag;
+	    }
+	}
+	.active-tag{
+		border: solid 1px #2878db;
+		background: #f6f9ff;
+		color: #2878db;
+	}
+}
