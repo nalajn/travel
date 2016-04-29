@@ -459,6 +459,7 @@ a {
       .wrap .best-travel .best-main .best-title:visited {
         color: #999999; }
   .wrap .themes-box {
+    overflow: auto;
     position: fixed;
     bottom: -100%;
     z-index: 999;

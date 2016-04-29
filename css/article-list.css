@@ -199,11 +199,14 @@ a {
 /*common*/
 /*travel-list end*/
 /*filter start*/
+.tags-container {
+  margin-bottom: 4rem; }
+
 .filter {
   position: fixed;
   top: 0;
   height: 0;
-  overflow: hidden;
+  overflow: auto;
   background: #fff; }
   .filter .head-title, .filter .filter-tag {
     line-height: 2.5rem;
@@ -251,7 +254,7 @@ a {
         width: 0.5rem;
         height: 0.8rem; }
   .filter .total {
-    position: absolute;
+    position: fixed;
     bottom: 0.75rem;
     left: 4%;
     width: 92%;

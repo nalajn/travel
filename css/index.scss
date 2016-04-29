@@ -332,6 +332,7 @@
 
 	/*themes start*/
 	.themes-box{
+		overflow: auto;
 		position: fixed;
 		bottom: -100%;
 		z-index: 999;
