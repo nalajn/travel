@@ -10,11 +10,157 @@ $border-gray: #e6e7e9;
 $tit-gray: #666666;
 $con-gray: #999999;
 $bac-gray: #f8f8f8;
+$deep-bac-gray: #e4e4e4;
+
+$textsize001: 0.6rem;
+$textsize002: 0.65rem;
+$textsize003: 0.7rem;
+$textsize004: 0.75rem;
+$textsize005: 0.8rem;
+$textsize006: 0.85rem;
+$textsize012: 0.45rem;
+
+/*day*/
+$textcolor001: #000000;
+$textcolor002: #333333;
+$textcolor003: #4a4a4a;
+$textcolor004: #666666;
+$textcolor005: #999999;
+$textcolor006: #b5b5b5;
+$textcolor007: #cccccc;
+$textcolor008: #ffffff;
+$textcolor010: #4680d1;
+
+/*night*/
+$textcolor001-night: #eeeeee;
+$textcolor002-night: #848484;
+$textcolor003-night: #848484;
+$textcolor005-night: #555555;
+$textcolor006-night: #444444;
+$textcolor007-night: #333333;
+$textcolor008-night: #999999;
 
 .wrap{
 	width: 100%;
+	font-size: 20px;
     @include box-sizing;
-
-	//文章列表
-    
 }
+
+.hide{
+	display: none;
+}
+
+.tags-list{
+	float: left;
+	margin-right: 0.6rem;
+	li{
+		float: left;
+	    padding: 0.05rem 0.15rem;
+	    border-radius: 0.1rem;
+	    text-align: center;
+		font-size: $textsize012;
+		color: $textcolor010;
+		&:nth-child(1){
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+.current-tag{
+	line-height: 2rem;
+    padding: 0 0.75rem;
+    background: $deep-blue;
+    color: $textcolor008;
+    font-size: $textsize003;
+    font-weight: 200;
+    &:after{
+    	content: '';
+        background: url('../images/icon/icon-down.png') center no-repeat;
+        background-size: 100%;
+	    position: absolute;
+	    top: 0.7rem;
+	    right: 0.75rem;
+	    width: 0.7rem;
+	    height: 0.7rem;
+    }
+}
+
+.best-time-num,.travel-time-num{
+	overflow: hidden;
+	margin-top: 0.5rem;
+	font-size: $textsize001;
+	color: $textcolor005;
+	.best-time,.travel-time{ 
+		float: left; 
+		margin-top: 0.2rem;
+	}
+	.best-num,.travel-num{ 
+		float: right; 
+		margin-top: 0.2rem;
+	}
+	li{
+		@include active-tag;
+	}
+}
+
+/*travel-list start*/
+.travel-list{
+	background: #e4e4e4;
+	.travel-item{
+		padding: 0.5rem 0.75rem;
+		border-bottom: 1px solid #f0f0f0;
+		background: #fff;
+		&:last-child{
+			border: 0;
+		}
+		a{
+			color: $textcolor004;
+			&:visited{
+				color: $textcolor005;
+			}
+		}
+	}
+	.travel-main{
+		overflow: hidden;
+		.travel-img{
+			float: left;
+		    width: 4.5rem;
+		    height: 3.4rem;
+		    margin-right: 0.75rem;
+		    img{
+		    	width: 100%;
+		    }
+		}
+		.travel-title,.travel-time-num{
+			float: left;
+			width: 68%;
+		}
+		.travel-title{ 
+			margin-top: 0.25rem;			
+			line-height: 1rem;
+			font-size: $textsize006;
+			font-weight: bold;
+			color: $textcolor001;
+			&:visited{
+				color: $textcolor005;
+			}
+		}
+	}
+}
+/*travel-list end*/
+
+/*night start*/
+.night{
+	.travel-list{
+		.travel-main{
+			.travel-title{ 
+				a{
+					&:visited{
+						color: $textcolor005-night;
+					}
+				}
+			}
+		}
+	}
+}
+/*night end*/

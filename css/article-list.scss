@@ -1,84 +1,8 @@
 @charset "utf-8";
 @import "lib/common";
 
-.tags-list{
-	float: left;
-	margin-right: 0.5rem;
-	li{
-		float: left;
-	    padding: 0.1rem;
-	    border-radius: 0.1rem;
-	    text-align: center;
-		font-size: 0.45rem;
-		&:nth-child(1){
-			margin-right: 0.5rem;
-		}
-	}
-}
-.current-tag{
-	line-height: 2rem;
-    border-bottom: solid 1px #f0f0f0;
-    padding: 0 0.75rem;
-    background: $deep-blue;
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 200;
-    &:after{
-    	content: '';
-        background: url('../images/icon/icon-down.png') center no-repeat;
-        background-size: 100%;
-	    position: absolute;
-	    top: 0.7rem;
-	    right: 0.75rem;
-	    width: 0.7rem;
-	    height: 0.7rem;
-    }
-}
 /*travel-list start*/
-.travel-list{
-	background: #e4e4e4;
-	.travel-item{
-		padding: 0.5rem 0.75rem;
-		border-bottom: 1px solid #f0f0f0;
-		background: #fff;
-		&:last-child{
-			border: 0;
-		}
-	}
-	.travel-main{
-		overflow: hidden;
-		.travel-img{
-			float: left;
-		    width: 30%;
-		    height: 3rem;
-		    margin-right: 0.5rem;
-		    img{
-		    	width: 100%;
-		    }
-		}
-		.travel-title,.travel-time-num{
-			float: left;
-			width: 66%;
-		}
-		.travel-title{ 
-			line-height: 1rem; 
-			font-size: 0.8rem;
-			font-weight: bold;
-			a{
-				color: #000;
-			}
-		}
-		.travel-time-num{
-			color: $con-gray;
-			font-size: 0.6rem;
-			.travel-time{ float: left; }
-			.travel-num{ float: right; }
-			li{
-    			@include active-tag;
-    		}
-		}
-	}
-}
+	/*common*/
 /*travel-list end*/
 /*filter start*/
 .filter{
@@ -88,7 +12,7 @@
     overflow: hidden;
     background: #fff;
 	.head-title,.filter-tag{
-		line-height: 2rem;
+		line-height: 2.5rem;
 	    background: $deep-blue;
 	    color: #fff;
 	}
@@ -109,7 +33,7 @@
 	}
 	.filter-tag{
 		padding: 0 0.75rem;
-		font-size: 0.7rem;
+		font-size: $textsize003;
 	}
 	.selected{
 		overflow: hidden;
@@ -142,9 +66,10 @@
 		}
 	}
 	.total{
-		position: relative;
+		position: absolute;
+		bottom: 0.75rem;
+		left: 4%;
 		width: 92%;
-		margin: 0 auto;
 		line-height: 2rem;
 		border-radius: 0.1rem;
 		background: #2878db;

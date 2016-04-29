@@ -1,6 +1,5 @@
 @charset "UTF-8";
 html {
-  font-size: 20px;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight: transparent;
   -webkit-text-size-adjust: none;
@@ -99,31 +98,37 @@ legend, hr {
 a {
   outline: none; }
 
+/*day*/
+/*night*/
 .wrap {
   width: 100%;
+  font-size: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.hide {
+  display: none; }
+
 .tags-list {
   float: left;
-  margin-right: 0.5rem; }
+  margin-right: 0.6rem; }
   .tags-list li {
     float: left;
-    padding: 0.1rem;
+    padding: 0.05rem 0.15rem;
     border-radius: 0.1rem;
     text-align: center;
-    font-size: 0.45rem; }
+    font-size: 0.45rem;
+    color: #4680d1; }
     .tags-list li:nth-child(1) {
       margin-right: 0.5rem; }
 
 .current-tag {
   line-height: 2rem;
-  border-bottom: solid 1px #f0f0f0;
   padding: 0 0.75rem;
   background: #4680d1;
-  color: #fff;
-  font-size: 0.8rem;
+  color: #ffffff;
+  font-size: 0.7rem;
   font-weight: 200; }
   .current-tag:after {
     content: '';
@@ -135,6 +140,21 @@ a {
     width: 0.7rem;
     height: 0.7rem; }
 
+.best-time-num, .travel-time-num {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  font-size: 0.6rem;
+  color: #999999; }
+  .best-time-num .best-time, .best-time-num .travel-time, .travel-time-num .best-time, .travel-time-num .travel-time {
+    float: left;
+    margin-top: 0.2rem; }
+  .best-time-num .best-num, .best-time-num .travel-num, .travel-time-num .best-num, .travel-time-num .travel-num {
+    float: right;
+    margin-top: 0.2rem; }
+  .best-time-num li, .travel-time-num li {
+    border: solid 1px #2878db;
+    color: #4680d1; }
+
 /*travel-list start*/
 .travel-list {
   background: #e4e4e4; }
@@ -144,36 +164,39 @@ a {
     background: #fff; }
     .travel-list .travel-item:last-child {
       border: 0; }
+    .travel-list .travel-item a {
+      color: #666666; }
+      .travel-list .travel-item a:visited {
+        color: #999999; }
   .travel-list .travel-main {
     overflow: hidden; }
     .travel-list .travel-main .travel-img {
       float: left;
-      width: 30%;
-      height: 3rem;
-      margin-right: 0.5rem; }
+      width: 4.5rem;
+      height: 3.4rem;
+      margin-right: 0.75rem; }
       .travel-list .travel-main .travel-img img {
         width: 100%; }
     .travel-list .travel-main .travel-title, .travel-list .travel-main .travel-time-num {
       float: left;
-      width: 66%; }
+      width: 68%; }
     .travel-list .travel-main .travel-title {
+      margin-top: 0.25rem;
       line-height: 1rem;
-      font-size: 0.8rem;
-      font-weight: bold; }
-      .travel-list .travel-main .travel-title a {
-        color: #000; }
-    .travel-list .travel-main .travel-time-num {
-      color: #999999;
-      font-size: 0.6rem; }
-      .travel-list .travel-main .travel-time-num .travel-time {
-        float: left; }
-      .travel-list .travel-main .travel-time-num .travel-num {
-        float: right; }
-      .travel-list .travel-main .travel-time-num li {
-        border: solid 1px #2878db;
-        background: #f6f9ff;
-        color: #2878db; }
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #000000; }
+      .travel-list .travel-main .travel-title:visited {
+        color: #999999; }
 
+/*travel-list end*/
+/*night start*/
+.night .travel-list .travel-main .travel-title a:visited {
+  color: #555555; }
+
+/*night end*/
+/*travel-list start*/
+/*common*/
 /*travel-list end*/
 /*filter start*/
 .filter {
@@ -183,7 +206,7 @@ a {
   overflow: hidden;
   background: #fff; }
   .filter .head-title, .filter .filter-tag {
-    line-height: 2rem;
+    line-height: 2.5rem;
     background: #4680d1;
     color: #fff; }
   .filter .head-title {
@@ -228,9 +251,10 @@ a {
         width: 0.5rem;
         height: 0.8rem; }
   .filter .total {
-    position: relative;
+    position: absolute;
+    bottom: 0.75rem;
+    left: 4%;
     width: 92%;
-    margin: 0 auto;
     line-height: 2rem;
     border-radius: 0.1rem;
     background: #2878db;
@@ -258,25 +282,22 @@ a {
         float: left;
         margin: 0.5rem 0.5rem 0 0;
         line-height: 0.8rem;
-        margin-right: 0.5rem;
         padding: 0.2rem 0.4rem;
-        border: solid 1px #f0f0f0;
+        border: solid 1px #dddddd;
         border-radius: 0.1rem;
         background: #fff;
-        font-size: 0.7rem;
-        color: #666; }
+        font-size: 0.65rem;
+        color: #666666; }
         .filter .tags-box .tags-list .tag a {
           line-height: 0.8rem;
-          margin-right: 0.5rem;
           padding: 0.2rem 0.4rem;
-          border: solid 1px #f0f0f0;
+          border: solid 1px #dddddd;
           border-radius: 0.1rem;
           background: #fff;
-          font-size: 0.7rem;
-          color: #666; }
+          font-size: 0.65rem;
+          color: #666666; }
       .filter .tags-box .tags-list .active-tag {
         border: solid 1px #2878db;
-        background: #f6f9ff;
-        color: #2878db; }
+        color: #4680d1; }
 
 /*filter end*/

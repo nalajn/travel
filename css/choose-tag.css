@@ -1,7 +1,6 @@
 @charset "UTF-8";
 @import url(lib/reset.css);
 html {
-  font-size: 20px;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight: transparent;
   -webkit-text-size-adjust: none;
@@ -100,12 +99,103 @@ legend, hr {
 a {
   outline: none; }
 
+/*day*/
+/*night*/
 .wrap {
   width: 100%;
+  font-size: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.hide {
+  display: none; }
+
+.tags-list {
+  float: left;
+  margin-right: 0.6rem; }
+  .tags-list li {
+    float: left;
+    padding: 0.05rem 0.15rem;
+    border-radius: 0.1rem;
+    text-align: center;
+    font-size: 0.45rem;
+    color: #4680d1; }
+    .tags-list li:nth-child(1) {
+      margin-right: 0.5rem; }
+
+.current-tag {
+  line-height: 2rem;
+  padding: 0 0.75rem;
+  background: #4680d1;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 200; }
+  .current-tag:after {
+    content: '';
+    background: url("../images/icon/icon-down.png") center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.7rem;
+    right: 0.75rem;
+    width: 0.7rem;
+    height: 0.7rem; }
+
+.best-time-num, .travel-time-num {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  font-size: 0.6rem;
+  color: #999999; }
+  .best-time-num .best-time, .best-time-num .travel-time, .travel-time-num .best-time, .travel-time-num .travel-time {
+    float: left;
+    margin-top: 0.2rem; }
+  .best-time-num .best-num, .best-time-num .travel-num, .travel-time-num .best-num, .travel-time-num .travel-num {
+    float: right;
+    margin-top: 0.2rem; }
+  .best-time-num li, .travel-time-num li {
+    border: solid 1px #2878db;
+    color: #4680d1; }
+
+/*travel-list start*/
+.travel-list {
+  background: #e4e4e4; }
+  .travel-list .travel-item {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff; }
+    .travel-list .travel-item:last-child {
+      border: 0; }
+    .travel-list .travel-item a {
+      color: #666666; }
+      .travel-list .travel-item a:visited {
+        color: #999999; }
+  .travel-list .travel-main {
+    overflow: hidden; }
+    .travel-list .travel-main .travel-img {
+      float: left;
+      width: 4.5rem;
+      height: 3.4rem;
+      margin-right: 0.75rem; }
+      .travel-list .travel-main .travel-img img {
+        width: 100%; }
+    .travel-list .travel-main .travel-title, .travel-list .travel-main .travel-time-num {
+      float: left;
+      width: 68%; }
+    .travel-list .travel-main .travel-title {
+      margin-top: 0.25rem;
+      line-height: 1rem;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #000000; }
+      .travel-list .travel-main .travel-title:visited {
+        color: #999999; }
+
+/*travel-list end*/
+/*night start*/
+.night .travel-list .travel-main .travel-title a:visited {
+  color: #555555; }
+
+/*night end*/
 .wrap {
   background: #f8f8f8; }
 
@@ -133,16 +223,15 @@ a {
   padding: 0.5rem 0.75rem; }
   .tags-box .tag {
     float: left;
-    margin-top: 0.5rem; }
+    margin: 0.5rem 0.6rem 0 0; }
     .tags-box .tag a {
       line-height: 0.8rem;
-      margin-right: 0.5rem;
       padding: 0.2rem 0.4rem;
-      border: solid 1px #f0f0f0;
+      border: solid 1px #dddddd;
       border-radius: 0.1rem;
       background: #fff;
-      font-size: 0.7rem;
-      color: #666; }
+      font-size: 0.65rem;
+      color: #666666; }
   .tags-box .active-tag {
     border: solid 1px #2878db;
     background: #f6f9ff;

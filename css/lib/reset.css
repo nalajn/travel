@@ -1,5 +1,5 @@
 @charset "utf-8";
-html {font-size: 20px;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight: rgba(0, 0, 0, 0);-webkit-text-size-adjust: none;overflow-y:scroll;-webkit-font-smoothing:antialiased;}
+html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight: rgba(0, 0, 0, 0);-webkit-text-size-adjust: none;overflow-y:scroll;-webkit-font-smoothing:antialiased;}
 /*body {font-size: 0.75em;}*/
 label {cursor: pointer;}
 a:link,a:visited {text-decoration: none;}

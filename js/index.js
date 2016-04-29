@@ -1,7 +1,6 @@
-// $import ("lib/common.js");
 (function($){
 'use strict'
-  
+
   //themes-box height
   $('.themes-box').height($(window).height());
 
@@ -34,6 +33,5 @@
   var li_margin = parseInt($('.recommend-box li').eq(0).css('margin-right'));
   $('.recommend-box').width(li_width * li_len + li_margin * li_len);
   $('.mask').css({marginTop:-$('.recommend-box img').height()});   
-
 
 })(Zepto)

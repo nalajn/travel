@@ -12,4 +12,38 @@
   // 	$('.tags-list li').eq(i).css({'border':'solid 1px'});
   // } 
 
+  //rem适配
+  function adapt() {
+      (function (doc, win) {
+          var docEl = doc.documentElement,
+              resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+              recalc = function () {
+                  var clientWidth = docEl.clientWidth;
+                  if(docEl.clientWidth > 750){
+                      clientWidth = 750;
+                  }
+                  if (!clientWidth) {
+                      return;
+                  }
+                  docEl.style.fontSize = 20 * (clientWidth / 375) + 'px';
+              };
+          recalc();
+          if (!doc.addEventListener) {
+              return;
+          }
+          win.addEventListener(resizeEvt, recalc, false);
+          doc.addEventListener('DOMContentLoaded', recalc, false);
+      })(document, window);
+  }
+  adapt();
+
+  //夜间模式
+  $('').on('tap',function(){
+    if($('.wrap').hasClass('night')){
+      $('.wrap').addClass('night');
+    }else{
+      $('.wrap').removeClass('night');
+    }
+  })
+
 })(Zepto)

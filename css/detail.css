@@ -1,6 +1,5 @@
 @charset "UTF-8";
 html {
-  font-size: 20px;
   -webkit-tap-highlight-color: transparent;
   -webkit-tap-highlight: transparent;
   -webkit-text-size-adjust: none;
@@ -99,12 +98,103 @@ legend, hr {
 a {
   outline: none; }
 
+/*day*/
+/*night*/
 .wrap {
   width: 100%;
+  font-size: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.hide {
+  display: none; }
+
+.tags-list {
+  float: left;
+  margin-right: 0.6rem; }
+  .tags-list li {
+    float: left;
+    padding: 0.05rem 0.15rem;
+    border-radius: 0.1rem;
+    text-align: center;
+    font-size: 0.45rem;
+    color: #4680d1; }
+    .tags-list li:nth-child(1) {
+      margin-right: 0.5rem; }
+
+.current-tag {
+  line-height: 2rem;
+  padding: 0 0.75rem;
+  background: #4680d1;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 200; }
+  .current-tag:after {
+    content: '';
+    background: url("../images/icon/icon-down.png") center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 0.7rem;
+    right: 0.75rem;
+    width: 0.7rem;
+    height: 0.7rem; }
+
+.best-time-num, .travel-time-num {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  font-size: 0.6rem;
+  color: #999999; }
+  .best-time-num .best-time, .best-time-num .travel-time, .travel-time-num .best-time, .travel-time-num .travel-time {
+    float: left;
+    margin-top: 0.2rem; }
+  .best-time-num .best-num, .best-time-num .travel-num, .travel-time-num .best-num, .travel-time-num .travel-num {
+    float: right;
+    margin-top: 0.2rem; }
+  .best-time-num li, .travel-time-num li {
+    border: solid 1px #2878db;
+    color: #4680d1; }
+
+/*travel-list start*/
+.travel-list {
+  background: #e4e4e4; }
+  .travel-list .travel-item {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    background: #fff; }
+    .travel-list .travel-item:last-child {
+      border: 0; }
+    .travel-list .travel-item a {
+      color: #666666; }
+      .travel-list .travel-item a:visited {
+        color: #999999; }
+  .travel-list .travel-main {
+    overflow: hidden; }
+    .travel-list .travel-main .travel-img {
+      float: left;
+      width: 4.5rem;
+      height: 3.4rem;
+      margin-right: 0.75rem; }
+      .travel-list .travel-main .travel-img img {
+        width: 100%; }
+    .travel-list .travel-main .travel-title, .travel-list .travel-main .travel-time-num {
+      float: left;
+      width: 68%; }
+    .travel-list .travel-main .travel-title {
+      margin-top: 0.25rem;
+      line-height: 1rem;
+      font-size: 0.85rem;
+      font-weight: bold;
+      color: #000000; }
+      .travel-list .travel-main .travel-title:visited {
+        color: #999999; }
+
+/*travel-list end*/
+/*night start*/
+.night .travel-list .travel-main .travel-title a:visited {
+  color: #555555; }
+
+/*night end*/
 .hide {
   display: none; }
 
@@ -129,15 +219,26 @@ a {
     font-size: 0.7rem;
     color: #fff; }
     .wrap .head .title-bar .back-list {
+      position: relative;
+      padding-left: 0.8rem;
       color: #fff; }
+      .wrap .head .title-bar .back-list:before {
+        content: '';
+        background: url("../images/icon/icon-back.png") center no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        width: 0.6rem;
+        height: 0.7rem; }
     .wrap .head .title-bar .edit-btn, .wrap .head .title-bar .more-btn {
       float: right;
       width: 0.6rem;
-      height: 0.7rem;
-      margin: 0 0.4rem; }
+      height: 0.7rem; }
     .wrap .head .title-bar .more-btn {
       background: url("../images/icon/icon-edit.png") center no-repeat;
-      background-size: 100%; }
+      background-size: 100%;
+      margin-right: 1rem; }
     .wrap .head .title-bar .edit-btn {
       background: url("../images/icon/icon-more.png") center no-repeat;
       background-size: 100%; }
@@ -161,20 +262,23 @@ a {
           position: absolute;
           bottom: 0;
           right: 0;
-          width: 0.8rem;
-          height: 0.8rem; }
+          width: 0.75rem;
+          height: 0.75rem; }
         .wrap .head .item-head .author .author-photo img {
-          width: 2rem;
-          height: 2rem;
+          width: 1.85rem;
+          height: 1.85rem;
           border-radius: 50%; }
       .wrap .head .item-head .author .author-name {
         float: left;
         overflow: hidden;
-        width: 84%;
+        width: 87%;
         text-overflow: ellipsis;
         white-space: nowrap;
-        font-size: 0.7rem;
-        color: #fff; }
+        font-size: 0.85rem;
+        color: #ffffff; }
+      .wrap .head .item-head .author .recommend-tag, .wrap .head .item-head .author .item-time {
+        font-size: 0.6rem;
+        color: #b5b5b5; }
       .wrap .head .item-head .author .recommend-tag {
         float: left;
         width: 60%;
@@ -185,8 +289,12 @@ a {
 .wrap .head-hide {
   position: fixed;
   z-index: 999;
+  width: 100%;
   border-bottom: solid 1px #f0f0f0;
-  background: #fff; }
+  background: #fff;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   .wrap .head-hide .title-bar {
     position: relative;
     overflow: hidden;
@@ -222,9 +330,12 @@ a {
       background-size: 100%; }
 
 .wrap .main .message-tags {
-  padding: 0.5rem 0.75rem;
+  overflow: hidden;
+  padding: 0.75rem;
   border-bottom: solid 1px #f0f0f0;
-  font-size: 0.6rem; }
+  background: #f8f8f8;
+  font-size: 0.6rem;
+  color: #666666; }
   .wrap .main .message-tags .message-time {
     float: left; }
   .wrap .main .message-tags .message-money {
@@ -235,118 +346,139 @@ a {
     .wrap .main .message-tags .tags-list .tag {
       float: left;
       margin: 0.5rem 0.5rem 0 0;
-      padding: 0.1rem 0.2rem;
+      padding: 0 0.2rem;
       border-radius: 0.1rem;
       border: solid 1px #2878db;
-      background: #f6f9ff;
-      color: #2878db;
+      color: #4680d1;
       font-size: 0.5rem; }
 
 .wrap .main .article-box {
   line-height: 1.1rem;
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   font-size: 0.7rem;
-  background: #f8f8f8;
-  color: #666666; }
+  background: #f8f8f8; }
   .wrap .main .article-box .article-txt {
-    padding: 0 0.75rem; }
-  .wrap .main .article-box .day-descriptions .day-title {
-    margin-top: 0.5rem;
-    line-height: 2rem;
+    padding: 0 0.75rem 2rem;
+    color: #666666;
+    font-size: 0.85rem; }
+  .wrap .main .article-box .day-descriptions .day-item .day-title {
+    padding-top: 1rem;
     border-top: solid 1px #f0f0f0;
     text-align: center;
-    color: #666666;
-    font-weight: normal; }
-    .wrap .main .article-box .day-descriptions .day-title .day-time {
-      margin-left: 0.5rem;
-      color: #999999;
-      font-size: 0.7rem; }
-  .wrap .main .article-box .img-description {
-    position: relative;
-    padding: 0.5rem 0.75rem; }
-    .wrap .main .article-box .img-description .img {
-      position: relative; }
-      .wrap .main .article-box .img-description .img img {
-        width: 100%; }
-      .wrap .main .article-box .img-description .img .btns {
-        position: absolute;
-        bottom: 5%;
-        right: 3%;
-        color: #999999; }
-        .wrap .main .article-box .img-description .img .btns .zan, .wrap .main .article-box .img-description .img .btns .comment {
+    color: #333333;
+    font-size: 0.8rem;
+    font-weight: 200; }
+    .wrap .main .article-box .day-descriptions .day-item .day-title .day-time {
+      margin-left: 0.5rem; }
+  .wrap .main .article-box .day-descriptions .day-item .journey {
+    border-bottom: solid 1px #f0f0f0;
+    padding: 1rem 0; }
+    .wrap .main .article-box .day-descriptions .day-item .journey:last-child {
+      border: 0;
+      padding-bottom: 0; }
+    .wrap .main .article-box .day-descriptions .day-item .journey:first-child {
+      padding-top: 0; }
+    .wrap .main .article-box .day-descriptions .day-item .journey .article-txt {
+      padding: 0 0.75rem 0.5rem; }
+    .wrap .main .article-box .day-descriptions .day-item .journey .img-description {
+      position: relative;
+      padding: 0.5rem 0.75rem 1rem;
+      opacity: 0.9; }
+      .wrap .main .article-box .day-descriptions .day-item .journey .img-description:last-child {
+        padding-bottom: 0.5rem; }
+      .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img {
+        position: relative; }
+        .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img img {
+          width: 100%; }
+        .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img .btns {
+          position: absolute;
+          bottom: 5%;
+          right: 3%;
+          color: #999999; }
+          .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img .btns .zan, .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img .btns .comment {
+            float: left;
+            position: relative;
+            border-radius: 0.2rem;
+            padding: 0.3rem 0.5rem 0.3rem 1.3rem;
+            background: #000;
+            opacity: 0.7;
+            font-size: 0.6rem; }
+          .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img .btns .zan {
+            margin-right: 0.5rem; }
+            .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img .btns .zan:before {
+              content: '';
+              background: url("../images/icon/icon-zan.png") center no-repeat;
+              background-size: 100%;
+              position: absolute;
+              top: 28%;
+              left: 0.5rem;
+              width: 0.6rem;
+              height: 0.6rem; }
+          .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img .btns .comment:before {
+            content: '';
+            background: url("../images/icon/icon-comment.png") center no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 30%;
+            left: 0.5rem;
+            width: 0.6rem;
+            height: 0.6rem; }
+      .wrap .main .article-box .day-descriptions .day-item .journey .img-description .article-txt {
+        padding: 0.75rem 0.5rem;
+        line-height: 1rem;
+        background: #000;
+        font-weight: bold;
+        font-size: 0.75rem;
+        color: #4a4a4a; }
+      .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address {
+        padding: 0 0.75rem;
+        line-height: 1.5rem;
+        background: #000;
+        font-size: 0.6rem;
+        color: #666666; }
+        .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address p {
+          overflow: hidden;
+          border-top: solid 1px #666666; }
+        .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address .time {
           position: relative;
-          border-radius: 0.2rem;
-          padding: 0.3rem 0.5rem 0.3rem 1.3rem;
-          background: #000;
-          opacity: 0.7;
-          font-size: 0.6rem; }
-        .wrap .main .article-box .img-description .img .btns .zan:before {
-          content: '';
-          background: url("../images/icon/icon-zan.png") center no-repeat;
-          background-size: 100%;
-          position: absolute;
-          top: 0.3rem;
-          left: 0.5rem;
-          width: 0.6rem;
-          height: 0.6rem; }
-        .wrap .main .article-box .img-description .img .btns .comment:before {
-          content: '';
-          background: url("../images/icon/icon-comment.png") center no-repeat;
-          background-size: 100%;
-          position: absolute;
-          top: 0.4rem;
-          left: 0.5rem;
-          width: 0.6rem;
-          height: 0.6rem; }
-    .wrap .main .article-box .img-description .article-txt {
-      padding: 0.5rem;
-      line-height: 0.8rem;
-      background: #181818;
-      color: #999;
-      font-size: 0.6rem; }
-    .wrap .main .article-box .img-description .time-address {
-      overflow: hidden;
-      background: #181818;
-      border-top: solid 1px #3f3f3f;
-      color: #535353;
-      font-size: 0.6rem; }
-      .wrap .main .article-box .img-description .time-address .time {
-        position: relative;
-        float: left;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        width: 48%;
-        padding-left: 10%; }
-        .wrap .main .article-box .img-description .time-address .time:before {
-          content: '';
-          background: url("../images/icon/icon-time.png") center no-repeat;
-          background-size: 100%;
-          position: absolute;
-          top: 0.2rem;
-          left: 0.5rem;
-          width: 0.5rem;
-          height: 0.6rem; }
-      .wrap .main .article-box .img-description .time-address .address {
-        position: relative;
-        float: right;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding-left: 10%;
-        width: 48%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap; }
-        .wrap .main .article-box .img-description .time-address .address:before {
-          content: '';
-          background: url("../images/icon/icon-address.png") center no-repeat;
-          background-size: 100%;
-          position: absolute;
-          top: 0.2rem;
-          left: 0.5rem;
-          width: 0.4rem;
-          height: 0.6rem; }
+          float: left;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          width: 48%;
+          padding-left: 0.8rem; }
+          .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address .time:before {
+            content: '';
+            background: url("../images/icon/icon-time.png") center no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 29%;
+            left: 0;
+            width: 0.5rem;
+            height: 0.6rem; }
+        .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address .address {
+          position: relative;
+          float: right;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          box-sizing: border-box;
+          padding-left: 1.2rem;
+          width: 48%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          background: url("../images/icon/line.png") no-repeat;
+          background-size: 1% 80%;
+          background-position: left; }
+          .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address .address:before {
+            content: '';
+            background: url("../images/icon/icon-address.png") center no-repeat;
+            background-size: 100%;
+            position: absolute;
+            top: 29%;
+            left: 0.5rem;
+            width: 0.4rem;
+            height: 0.6rem; }
 
 .wrap .mask {
   position: fixed;
@@ -363,15 +495,16 @@ a {
   background: #fff;
   opacity: 0.9; }
   .wrap .foot .more-list dl {
-    line-height: 2rem;
-    font-size: 0.7rem;
-    color: #656565; }
+    line-height: 2.5rem;
+    font-size: 0.8rem;
+    color: #333333; }
   .wrap .foot .more-list dt {
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    font-weight: 200; }
     .wrap .foot .more-list dt a {
       display: inline-block;
       width: 100%;
-      color: #333; }
+      color: #333333; }
   .wrap .foot .more-list .active {
     position: relative; }
     .wrap .foot .more-list .active a {
@@ -389,11 +522,19 @@ a {
     border-bottom: solid 1px #f0f0f0;
     padding: 0 1rem;
     overflow: hidden;
+    height: 2.5rem;
+    line-height: 2.5rem;
     white-space: nowrap;
     text-overflow: ellipsis; }
+  .wrap .foot .more-list a {
+    display: inline-block;
+    width: 96%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #666666; }
   .wrap .foot .more-list em {
-    color: #333;
-    font-weight: bold; }
+    margin-right: 0.5rem; }
   .wrap .foot .edit-list {
     line-height: 2rem;
     font-size: 0.7rem;
@@ -405,7 +546,28 @@ a {
     line-height: 2rem;
     text-align: center;
     color: #4680d1;
-    font-size: 0.8rem; }
+    font-size: 0.85rem; }
 
 .overflow {
   overflow: hidden; }
+
+/*night start*/
+.night .head .item-head .author .author-name {
+  color: #999999; }
+
+.night .head .item-head .author .recommend-tag, .night .head .item-head .author .item-time {
+  color: #444444; }
+
+.night .main .article-box .day-descriptions .day-item .day-title {
+  color: #848484; }
+
+.night .main .article-box .day-descriptions .day-item .journey .img-description .article-txt {
+  color: #848484; }
+
+.night .foot .more-list dl {
+  color: #848484; }
+
+.night .foot .more-list dt a {
+  color: #848484; }
+
+/*night end*/

@@ -1,4 +1,3 @@
-// $import ("lib/common.js");
 (function($){
 'use strict' 
 
@@ -65,13 +64,21 @@
 	
 	//head
 	$(window).scroll(function () {
+		//隐藏封面
         if($(window).scrollTop() >= 80){
 			$('.head').addClass('hide');
 			$('.head-hide').removeClass('hide');
-			$('.main').css({'padding-top': '2rem'})
+			$('.main').css({'padding-top': '2rem'});
+			var text = $('.head-hide .title-txt').text();
+			$('.head-hide .title-txt').text(text.slice(0,5)+'...'+text.slice(-5));
+		}
+		//显示封面
+		if($(window).scrollTop()=== 0){
+			$('.head').removeClass('hide');
+			$('.head-hide').addClass('hide');
+			$('.main').css({'padding-top': '0'});
 		}
     })
-
 
 	//目录
 	$('.more-btn').on('tap',function(){
@@ -79,8 +86,8 @@
 	})
 
 	//选择day1、day2...
-	$('.more-list .day-tit').on('tap',function(){
-		$('.day-tit').removeClass('active');
+	$('.more-list .day-tit,.more-list .day-con').on('tap',function(){
+		$('.day-tit,.day-con').removeClass('active');
 		$(this).addClass('active');
 		hideModule();
 	})
@@ -111,10 +118,9 @@
 	}
 
 })(Zepto)
-// $import ("lib/common.js");
 (function($){
 'use strict'
-  
+
   //themes-box height
   $('.themes-box').height($(window).height());
 
@@ -147,6 +153,5 @@
   var li_margin = parseInt($('.recommend-box li').eq(0).css('margin-right'));
   $('.recommend-box').width(li_width * li_len + li_margin * li_len);
   $('.mask').css({marginTop:-$('.recommend-box img').height()});   
-
 
 })(Zepto)

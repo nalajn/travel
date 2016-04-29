@@ -1,4 +1,3 @@
-// $import ("lib/common.js");
 (function($){
 'use strict' 
 
