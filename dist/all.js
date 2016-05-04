@@ -117,6 +117,13 @@
 		$('.wrap').removeClass('overflow').removeAttr('style');
 	}
 
+	//点击目录滑动到相应位置
+	$(".more-list").on('click','a'function(){
+        var hr = $(this).attr("href");
+        var anh = $(hr).offset().top;
+        $("html,body").stop().animate({scrollTop:anh},2000);
+    })
+
 })(Zepto)
 (function($){
 'use strict'

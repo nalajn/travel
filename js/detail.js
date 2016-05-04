@@ -29,6 +29,11 @@
 		$('.day-tit,.day-con').removeClass('active');
 		$(this).addClass('active');
 		hideModule();
+		
+		//滚动到相应位置
+        var hr = $(this).find('a').attr("data-href");
+        var anh = $(hr).offset().top-140;
+        $('body').scrollTop(anh);
 	})
 
 	//编辑
@@ -55,5 +60,6 @@
 		$('.mask,.foot,.more-list,.edit-list,.cancel').animate({bottom:"-100%"}).addClass('hide');
 		$('.wrap').removeClass('overflow').removeAttr('style');
 	}
+
 
 })(Zepto)
