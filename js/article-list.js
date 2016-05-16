@@ -34,4 +34,18 @@
   	$('.wrap').removeClass('overflow').removeAttr('style');
   }
 
+  //获取url参数
+  function getUrlParam(name, url) {
+    var search = url || document.location.search;
+    var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+    var r = search.substr(1).match(reg);  //匹配目标参数
+    if (r!=null) {
+        return unescape(r[2]);
+    }
+    else{
+        return null;
+    }
+  }
+  
+
 })(Zepto)

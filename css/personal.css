@@ -280,90 +280,76 @@ a {
   color: #555555; }
 
 /*night end*/
-/*travel-list start*/
-/*common*/
-/*travel-list end*/
-/*filter start*/
-.tags-container {
-  overflow: auto;
-  height: 80%;
-  padding-bottom: 7.5rem; }
+.wrap .title-bar {
+  position: relative;
+  border-bottom: solid 1px #f0f0f0;
+  text-align: center;
+  padding: 0.5rem 0.75rem 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  color: #666666; }
+  .wrap .title-bar:before {
+    content: '';
+    background: url("../images/icon/icon-left.png") center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 28%;
+    left: 0.75rem;
+    width: 0.5rem;
+    height: 1rem; }
+  .wrap .title-bar .back {
+    position: absolute;
+    left: 1.75rem;
+    top: 0.6rem; }
+  .wrap .title-bar a {
+    color: #4680d1; }
 
-.filter {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 0;
-  overflow: hidden;
-  background: #fff; }
-  .filter .head-title, .filter .filter-tag {
-    line-height: 2.5rem;
-    background: #4680d1;
-    color: #fff; }
-  .filter .head-title {
-    position: relative;
-    text-align: center;
-    font-size: 0.75rem; }
-    .filter .head-title:before {
-      content: '';
-      background: url("../images/icon/icon-close-white.png") no-repeat;
-      background-size: 100%;
-      position: absolute;
-      top: 33%;
-      left: 0.75rem;
-      width: 0.6rem;
-      height: 0.6rem; }
-  .filter .filter-tag {
-    padding: 0 0.75rem;
-    font-size: 0.7rem; }
-  .filter .selected {
+.wrap .personal_article-list {
+  padding-bottom: 2rem; }
+  .wrap .personal_article-list li {
     overflow: hidden;
-    line-height: 2.5rem;
-    border-bottom: solid 1px #f0f0f0;
     padding: 0 0.75rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.7rem; }
-    .filter .selected .selected-theme {
-      float: left;
-      color: #4680d1; }
-    .filter .selected .selected-tag {
-      position: relative;
-      float: right;
-      width: 80%;
-      padding-right: 0.75rem;
-      text-align: right; }
-      .filter .selected .selected-tag a {
-        display: inline-block;
-        width: 100%;
-        color: #666; }
-      .filter .selected .selected-tag:after {
-        content: '';
-        background: url("../images/icon/icon-right-more.png") no-repeat;
-        background-size: 100%;
-        position: absolute;
-        top: 33%;
-        right: 0;
-        width: 0.5rem;
-        height: 0.8rem; }
-  .filter .total {
-    position: fixed;
-    bottom: 0.75rem;
-    left: 4%;
-    width: 92%;
+    border-bottom: solid 1px #f0f0f0;
     line-height: 2rem;
-    border-radius: 0.1rem;
-    background: #2878db;
-    font-size: 0.8rem;
-    text-align: center;
-    color: #f8f8f8; }
-    .filter .total:after {
-      content: '';
-      background: url("../images/icon/icon-right-white.png") no-repeat;
-      background-size: 100%;
-      position: absolute;
-      top: 33%;
-      right: 5rem;
-      width: 0.5rem;
-      height: 0.8rem; }
+    background-size: #ffffff;
+    font-size: 0.8rem; }
+    .wrap .personal_article-list li .article_title {
+      float: left;
+      width: 85%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #000000; }
+    .wrap .personal_article-list li .edit {
+      float: right;
+      color: #4680d1; }
+    .wrap .personal_article-list li p {
+      float: left;
+      width: 100%; }
+    .wrap .personal_article-list li .time, .wrap .personal_article-list li .comment {
+      font-size: 0.65rem;
+      color: #999999; }
+    .wrap .personal_article-list li .time {
+      float: left; }
+    .wrap .personal_article-list li .comment {
+      float: right; }
 
-/*filter end*/
+.wrap .num {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  line-height: 2rem;
+  border-top: solid 1px #f0f0f0;
+  background: #fff;
+  font-size: 0.6rem;
+  color: #666666;
+  text-align: center; }
+
+/*night start*/
+.night .personal_article-list li {
+  background: #999999; }
+  .night .personal_article-list li .article_title {
+    color: #eeeeee; }
+  .night .personal_article-list li .time, .night .personal_article-list li .comment {
+    color: #555555; }
+
+/*night end*/

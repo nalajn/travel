@@ -6,13 +6,16 @@
 /*travel-list end*/
 /*filter start*/
 .tags-container{
-	margin-bottom: 4rem;
+	overflow: auto;
+    height: 80%;
+    padding-bottom: 7.5rem;
 }
 .filter{
 	position: fixed;
     top: 0;
+    width: 100%;
     height: 0;
-    overflow: auto;
+    overflow: hidden;
     background: #fff;
 	.head-title,.filter-tag{
 		line-height: 2.5rem;
@@ -40,7 +43,7 @@
 	}
 	.selected{
 		overflow: hidden;
-	    line-height: 2rem;
+	    line-height: 2.5rem;
 	    border-bottom: solid 1px #f0f0f0;
 	    padding: 0 0.75rem;
 	    margin-bottom: 0.75rem;
@@ -52,8 +55,12 @@
 		.selected-tag{
 			position: relative;
 			float: right;
+			width:80%;
 			padding-right: 0.75rem;
+			text-align: right;
 			a{
+				display: inline-block;
+				width: 100%;
 				color: #666;
 			}
 			&:after{
@@ -90,26 +97,50 @@
 		    height: 0.8rem;
 	    }
 	}
-	.tags-box{
-		overflow: hidden;
-		padding: 0 0.75rem 0.75rem;
-		.tags-title{
-			@include tag-tit;
-		}
-		.tags-list{
-			width: 100%;
-			.tag{
-				float: left;
-			    margin: 0.5rem 0.5rem 0 0;
-			    @include tag;
-			    a{
-			    	@include tag;
-			    }
-			}
-			.active-tag{
-				@include active-tag;
-			}
-		}
-	}
+	// .tags-box{
+	// 	overflow: hidden;
+	// 	padding: 0 0.75rem 0.75rem;
+	// 	&:last-child{
+	// 		margin-bottom: 7.5rem;
+	// 	}
+	// 	.tags-title{
+	// 		@include tag-tit;
+	// 	}
+	// 	.tags-list{
+	// 		width: 100%;
+	// 		max-width: initial;
+	// 		height: initial;
+	// 		.tag{
+	// 			position: relative;
+	// 			float: left;
+	// 			max-width: initial;
+	// 			height: initial;
+	// 			line-height: initial;
+	// 		    padding: 0.4rem 0.5rem;
+	// 		    margin: 0.75rem 0.5rem 0 0;
+	// 			border: solid 0.5px #dddddd;
+	// 			border-radius: 0.2rem;
+	// 			background: #fff;
+	// 			font-size: $textsize002;
+	// 			color: $textcolor004;
+	// 		    a{
+	// 		    	@include tag;
+	// 		    }
+	// 		}
+	// 		.active-tag{
+	// 			@include active-tag;
+	// 			&:before{
+	// 				content: '';
+	// 		        background: #006aff;
+	// 		        opacity: 0.08;
+	// 		        position: absolute;
+	// 		        top: 0;
+	// 			    right: 0;
+	// 			    width: 100%;
+	// 			    height: 100%;
+	// 			}
+	// 		}
+	// 	}
+	// }
 }
 /*filter end*/

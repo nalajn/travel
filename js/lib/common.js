@@ -61,4 +61,32 @@
     }
   })
 
+  //标签长度适配
+  function tagLengthAdapt(container){
+    var eachLength,totalLength,
+        screen = $(window).width();
+    if(screen <= 320){
+      eachLength = 3;
+      totalLength = 6;
+    }else{
+      eachLength = 4;
+      totalLength = 8;
+    }
+    console.log(eachLength)
+    container.find('.tags-list').each(function(){
+      var first = $(this).find('li:nth-child(1)');
+      var second = $(this).find('li:nth-child(2)');
+      if((first.text().length > eachLength || second.text().length > eachLength) 
+          && (first.text().length + second.text().length) == totalLength){
+        if(first.text().length>second.text().length){
+          first.css({"maxWidth":"initial"});
+          console.log(first.css("maxWidth"))
+        }
+      }
+    })
+  }
+
+  tagLengthAdapt($('.travel-list'));
+
+
 })(Zepto)

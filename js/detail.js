@@ -1,10 +1,13 @@
 (function($){
 'use strict'
 	
+	var win_top,top,next_top,id;
+
 	//head
 	$(window).scroll(function () {
+		win_top = $(window).scrollTop();
 		//隐藏封面
-        if($(window).scrollTop() >= 80){
+        if(win_top >= 80){
 			$('.head').addClass('hide');
 			$('.head-hide').removeClass('hide');
 			$('.main').css({'padding-top': '2rem'});
@@ -12,12 +15,31 @@
 			$('.head-hide .title-txt').text(text.slice(0,5)+'...'+text.slice(-5));
 		}
 		//显示封面
-		if($(window).scrollTop()=== 0){
+		if(win_top === 0){
 			$('.head').removeClass('hide');
 			$('.head-hide').addClass('hide');
 			$('.main').css({'padding-top': '0'});
 		}
+
+		//目录
+		$('.day-title,.journey').each(function(){
+			top = $(this).offset().top-40;
+			next_top = $(this).offset().top+$(this).height();
+			id = $(this).attr('id');
+			if(top <= win_top && next_top > win_top){
+				$('.more-list a').each(function(){
+					if($(this).attr('href') == id){
+						$('.day-tit,.day-con').removeClass('active');
+						$(this).parent().addClass('active');
+					}
+				})
+			}
+		})
+		
     })
+
+    //封面图
+    $('.head').css({"background-image":"url("+$('head').attr('data-img')+")"});
 
 	//目录
 	$('.more-btn').on('tap',function(){
@@ -29,7 +51,7 @@
 		$('.day-tit,.day-con').removeClass('active');
 		$(this).addClass('active');
 		hideModule();
-		
+
 		//滚动到相应位置
         var hr = $(this).find('a').attr("data-href");
         var anh = $(hr).offset().top-140;

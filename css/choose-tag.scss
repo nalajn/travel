@@ -8,7 +8,10 @@
 .head-title{
 	position: relative;
 	display: block;
-  	padding: 0.5rem 0.75rem;
+	@include box-sizing;
+	height: 2.5rem;
+	line-height: 2.5rem;
+  	padding: 0 0.75rem;
     border-bottom: solid 1px #f0f0f0;
     background: $deep-blue;
 	font-size: 0.8rem;
@@ -19,7 +22,7 @@
         background: url('../images/icon/icon-close-white.png') no-repeat;
         background-size: 100%;
 	    position: absolute;
-	    top: 33%;
+	    top: 36%;
 	    left: 0.75rem;
 	    width: 0.6rem;
 	    height: 0.6rem;
@@ -29,15 +32,34 @@
 	overflow: hidden;
 	padding: 0.5rem 0.75rem;
 	.tag{
+		position: relative;
 		float: left;
-	    margin: 0.5rem 0.6rem 0 0;
+		max-width: initial;
+		height: initial;
+		line-height: initial;
+	    padding: 0.4rem 0.5rem;
+	    margin: 0.75rem 0.5rem 0 0;
+		border: solid 0.5px #dddddd;
+		border-radius: 0.2rem;
+		background: #fff;
+		font-size: $textsize002;
+		color: $textcolor004;
 	    a{
 	    	@include tag;
+	    	border: 0;
 	    }
 	}
 	.active-tag{
-		border: solid 1px #2878db;
-		background: #f6f9ff;
-		color: #2878db;
+		@include active-tag;
+		&:before{
+			content: '';
+	        background: #006aff;
+	        opacity: 0.08;
+	        position: absolute;
+	        top: 0;
+		    right: 0;
+		    width: 100%;
+		    height: 100%;
+		}
 	}
 }

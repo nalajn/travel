@@ -46,28 +46,87 @@ $textcolor008-night: #999999;
     @include box-sizing;
 }
 
+.overflow{
+	overflow: hidden;
+}
 .hide{
 	display: none;
 }
 
 .tags-list{
 	float: left;
-	margin-right: 0.6rem;
+	overflow: hidden;
+	max-width: 9rem;
+    height: 0.9rem;
 	li{
+		overflow: hidden;
 		float: left;
-	    padding: 0.05rem 0.15rem;
+		max-width: 0.9rem;
+		height: 0.6rem;
+		line-height: 0.6rem;
+	    padding: 0.05rem;
+	    margin-right: 0.5rem;
 	    border-radius: 0.1rem;
 	    text-align: center;
 		font-size: $textsize012;
 		color: $textcolor010;
-		&:nth-child(1){
-			margin-right: 0.5rem;
+	}
+}
+
+.index .themes-box,.article-list .filter{
+	.tags-box{
+		overflow: hidden;
+		padding: 0 0.75rem 0.75rem;
+		&:last-child{
+			margin-bottom: 7.5rem;
+		}
+		.tags-title{
+			@include tag-tit;
+		}
+		.tags-list{
+			width: 100%;
+			max-width: initial;
+			height: initial;
+			.tag{
+				position: relative;
+				float: left;
+				max-width: initial;
+				height: 0.95rem;
+				line-height: 1rem;
+			    padding: 0.4rem 0.5rem;
+			    margin: 0.75rem 0.5rem 0 0;
+				border: solid 0.5px #dddddd;
+				border-radius: 0.2rem;
+				background: #fff;
+				font-size: $textsize002;
+				color: $textcolor004;
+			    a{
+			    	padding: 0.2rem 0.4rem;
+					border-radius: 0.1rem;
+					background: #fff;
+					font-size: $textsize002;
+					color: $textcolor004;
+			    }
+			}
+			.active-tag{
+				@include active-tag;
+				&:before{
+					content: '';
+			        background: #006aff;
+			        opacity: 0.08;
+			        position: absolute;
+			        top: 0;
+				    right: 0;
+				    width: 100%;
+				    height: 100%;
+				}
+			}
 		}
 	}
 }
 
 .current-tag{
-	line-height: 2rem;
+	line-height: 2.5rem;
     padding: 0 0.75rem;
     background: $deep-blue;
     color: $textcolor008;
@@ -78,31 +137,51 @@ $textcolor008-night: #999999;
         background: url('../images/icon/icon-down.png') center no-repeat;
         background-size: 100%;
 	    position: absolute;
-	    top: 0.7rem;
+	    top: 3.5%;
 	    right: 0.75rem;
 	    width: 0.7rem;
 	    height: 0.7rem;
     }
 }
 
+
 .best-time-num,.travel-time-num{
+	position: relative;
 	overflow: hidden;
-	margin-top: 0.5rem;
 	font-size: $textsize001;
 	color: $textcolor005;
 	.best-time,.travel-time{ 
 		float: left; 
-		margin-top: 0.2rem;
+		margin: 0.1rem 0.5rem 0 0;
 	}
 	.best-num,.travel-num{ 
-		float: right; 
-		margin-top: 0.2rem;
+		position: absolute;
+		right: 0; 
 	}
 	li{
 		@include active-tag;
 	}
 }
-
+.best-time-num{
+	padding: 0.5rem 0;
+	.tags-list{
+		li{
+			max-width: initial; 
+		}
+	}
+}
+.travel-time-num{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding-top: 0.61rem;
+	.tags-list{
+		max-width: 4.6rem;
+		li{
+			max-width: 1.8rem;
+		}
+	}
+}
 /*travel-list start*/
 .travel-list{
 	background: #e4e4e4;
@@ -121,28 +200,57 @@ $textcolor008-night: #999999;
 		}
 	}
 	.travel-main{
+		position: relative;
 		overflow: hidden;
 		.travel-img{
+			overflow: hidden;
 			float: left;
 		    width: 4.5rem;
 		    height: 3.4rem;
-		    margin-right: 0.75rem;
+		    margin-right: 0.5rem;
 		    img{
 		    	width: 100%;
 		    }
 		}
 		.travel-title,.travel-time-num{
 			float: left;
-			width: 68%;
+			width: 12.2rem;
 		}
-		.travel-title{ 
-			margin-top: 0.25rem;			
+		.travel-title{ 			
 			line-height: 1rem;
+			overflow : hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
 			font-size: $textsize006;
-			font-weight: bold;
 			color: $textcolor001;
 			&:visited{
 				color: $textcolor005;
+			}
+		}
+	}
+}
+
+//iphone 5
+@media screen and (max-width:320px){
+	.travel-time-num{
+		.tags-list{
+			max-width: 4.6rem;
+			li{
+				max-width: 1.5rem;
+			}
+		}
+	}
+}
+
+//iphone6p
+@media screen and (min-width: 375px) and (max-width: 435px){
+	.travel-time-num{
+		.tags-list{
+			max-width: 4.8rem;
+			li{
+				max-width: 1.9rem;
 			}
 		}
 	}

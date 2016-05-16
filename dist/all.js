@@ -46,6 +46,7 @@
         return null;
     }
   }
+  
 
 })(Zepto)
 (function($){
@@ -62,10 +63,13 @@
 (function($){
 'use strict'
 	
+	var win_top,top,next_top,id;
+
 	//head
 	$(window).scroll(function () {
+		win_top = $(window).scrollTop();
 		//隐藏封面
-        if($(window).scrollTop() >= 80){
+        if(win_top >= 80){
 			$('.head').addClass('hide');
 			$('.head-hide').removeClass('hide');
 			$('.main').css({'padding-top': '2rem'});
@@ -73,12 +77,31 @@
 			$('.head-hide .title-txt').text(text.slice(0,5)+'...'+text.slice(-5));
 		}
 		//显示封面
-		if($(window).scrollTop()=== 0){
+		if(win_top === 0){
 			$('.head').removeClass('hide');
 			$('.head-hide').addClass('hide');
 			$('.main').css({'padding-top': '0'});
 		}
+
+		//目录
+		$('.day-title,.journey').each(function(){
+			top = $(this).offset().top-40;
+			next_top = $(this).offset().top+$(this).height();
+			id = $(this).attr('id');
+			if(top <= win_top && next_top > win_top){
+				$('.more-list a').each(function(){
+					if($(this).attr('href') == id){
+						$('.day-tit,.day-con').removeClass('active');
+						$(this).parent().addClass('active');
+					}
+				})
+			}
+		})
+		
     })
+
+    //封面图
+    $('.head').css({"background-image":"url("+$('head').attr('data-img')+")"});
 
 	//目录
 	$('.more-btn').on('tap',function(){
@@ -90,6 +113,11 @@
 		$('.day-tit,.day-con').removeClass('active');
 		$(this).addClass('active');
 		hideModule();
+
+		//滚动到相应位置
+        var hr = $(this).find('a').attr("data-href");
+        var anh = $(hr).offset().top-140;
+        $('body').scrollTop(anh);
 	})
 
 	//编辑
@@ -117,12 +145,6 @@
 		$('.wrap').removeClass('overflow').removeAttr('style');
 	}
 
-	//点击目录滑动到相应位置
-	$(".more-list").on('click','a'function(){
-        var hr = $(this).attr("href");
-        var anh = $(hr).offset().top;
-        $("html,body").stop().animate({scrollTop:anh},2000);
-    })
 
 })(Zepto)
 (function($){
@@ -130,6 +152,7 @@
 
   //themes-box height
   $('.themes-box').height($(window).height());
+  $('.focus').height($(window).width()/2);
 
   //slider
   TouchSlide({ 
@@ -143,14 +166,14 @@
   });
 
   //滑出选择主题页面
-  $('.more').on('tap',function(){
-    $('.themes-box').animate({bottom:"0"});
+  $('.more').on('click',function(){
+    $('.themes-box').removeClass('hide').animate({top:"0"});
     $('.wrap').height($(window).height()).addClass('overflow');
   })
 
   //关闭选择主题页面
-  $('.themes-box .head-title').on('tap',function(){
-    $('.themes-box').animate({bottom:"-100%"});
+  $('.themes-box .head-title').on('click',function(){
+    $('.themes-box').animate({bottom:"-100%"}).addClass('hide');
     $('.wrap').removeClass('overflow').removeAttr('style');
   })
 
@@ -160,5 +183,18 @@
   var li_margin = parseInt($('.recommend-box li').eq(0).css('margin-right'));
   $('.recommend-box').width(li_width * li_len + li_margin * li_len);
   $('.mask').css({marginTop:-$('.recommend-box img').height()});   
+
+  //标签总数<=8,显示两个，否则显示第一个
+  // var num;
+  // $('.best-item,.travel-item').each(function(){
+  //   num = 0
+  //   $(this).find('li').each(function(){
+  //     num+=$(this).text().length;
+  //   })
+  //   if(num > 8){
+  //     $(this).find('li:nth-child(2)').hide();
+  //   }
+  // })
+
 
 })(Zepto)

@@ -1,5 +1,6 @@
 @charset "utf-8";
-html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight: rgba(0, 0, 0, 0);-webkit-text-size-adjust: none;overflow-y:scroll;-webkit-font-smoothing:antialiased;}
+html {-webkit-tap-highlight-color: rgba(0, 0, 0, 0);-webkit-tap-highlight: rgba(0, 0, 0, 0);-webkit-text-size-adjust: none;overflow-y:scroll;-webkit-font-smoothing:antialiased;
+ font-family: "Microsoft YaHei", Arial, "Hiragino Sans GB W3", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;}
 /*body {font-size: 0.75em;}*/
 label {cursor: pointer;}
 a:link,a:visited {text-decoration: none;}
