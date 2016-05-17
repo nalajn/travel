@@ -279,20 +279,11 @@ a {
 /*travel-list end*/
 /*night start*/
 .night .best-time-num li, .night .travel-time-num li {
-  border: solid 0.5px #2878db;
-  background: #4680d1;
-  opacity: 1;
-  color: #ffffff; }
+  border: solid 0.5px #2878db; }
 
 .night .themes-box .tags-box .tags-title, .night .filter .tags-box .tags-title {
   font-size: 0.7rem;
   color: #848484; }
-
-.night .themes-box .tags-box .tags-list .active-tag, .night .filter .tags-box .tags-list .active-tag {
-  border: solid 0.5px #2878db;
-  background: #4680d1;
-  opacity: 1;
-  color: #ffffff; }
 
 .night .travel-list {
   background: #2f2f2f; }
