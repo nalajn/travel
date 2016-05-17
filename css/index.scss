@@ -3,7 +3,7 @@
 
 .wrap{
     overflow: hidden;
-	background: $bac-gray;
+	background: $bgcolor01;
 
 	/*opinion start*/
 	.opinion{
@@ -16,7 +16,7 @@
 	    line-height: 1.4rem;
 	    border: solid 1px $border-gray;
 	    border-radius: 0.8rem;
-	    background: $textcolor008;
+	    background: $bgcolor01;
 	    color: $textcolor007;
 	    font-size: $textsize002;
 	    &:before{
@@ -78,7 +78,7 @@
 				width: 0.25rem; 
 				height: 0.25rem; 
 				margin-top: -0.05rem; 
-				background:#fff;
+				background: $bgcolor01;
 			}
 		} 
 		.bd{ 
@@ -100,7 +100,7 @@
 	.themes{
 		overflow: hidden;
 		padding-bottom: 0.75rem;
-		background: $bac-gray;
+		background: $bgcolor01;
 		font-size: $textsize001;
 		color: $textcolor004;
 		.themes-item{
@@ -263,7 +263,7 @@
 	/*recommend start*/
 	.recommend{
 		overflow: hidden;
-	    background: $deep-bac-gray;
+	    background: $bgcolor28;
 	    padding: 4%;
 		li{
 			position: relative;
@@ -308,11 +308,12 @@
 	/*best-travel start*/
 	.best-travel{
 		overflow: hidden;
-		background: #e4e4e4;
+		padding-bottom: 0.5rem;
+		background: $bgcolor28;
 		.best-item{
 		    padding: 0 0.75rem 0rem;
-		    margin-bottom: 0.5rem;
-			background: $textcolor008;
+		    border-bottom: solid 1px $bgcolor33;
+			background: $bgcolor01;
 			a{
 				color: $textcolor001;
 				&:visited{
@@ -322,13 +323,14 @@
 		}
 		.best-main{
 			.best-img img{
+				overflow: hidden;
 				width: 100%;
+				height: 9.7rem;
 			}
 			.best-title{    
 				line-height: 1.2rem;
     			padding: 0.75rem 0;
 				font-size: $textsize006;
-				font-weight: bold;
 				color: $textcolor001;
 				&:visited{
 					color: $textcolor005;
@@ -349,16 +351,16 @@
 		bottom: -100%;
 		z-index: 999;
 		width: 100%;
-		background: #f8f8f8;
+		background: $bgcolor01;
 		.head-title{
 			position: relative;
 			height: 2.5rem;
 			line-height: 2.5rem;
 		    padding: 0 0.75rem;
 			font-size: 0.8rem;
-			color: #666666;
+			color: $textcolor004;
 		    text-align: center;
-		    border-bottom: solid 1px #f0f0f0;
+		    border-bottom: solid 1px $bgcolor33;
 			&:before{
 		        content: '';
 		        background: url('../images/icon/icon-close-gray.png') no-repeat;
@@ -372,13 +374,12 @@
 		}
 		.title{
 			@include tag-tit;
-			font-weight: bold;
 		}
 		.tags-usual-box{
 			overflow: auto;
 		    font-size: 0.8rem;
 		    padding: 0.5rem 0.75rem 0.5rem;
-		    border-bottom: solid 1px #f0f0f0;
+		    border-bottom: solid 1px $bgcolor33;
 			.common-tags,li{
 				float: left;
 			}
@@ -394,9 +395,9 @@
 					line-height: initial;
 				    padding: 0.4rem 0.5rem;
 				    margin: 0 0.5rem 0.75rem 0;
-					border: solid 0.5px #dddddd;
+					border: solid 0.5px $bgcolor33;
 					border-radius: 0.2rem;
-					background: #fff;
+					background: $bgcolor40;
 					font-size: $textsize002;
 					color: $textcolor004;
 				}
@@ -407,7 +408,7 @@
 			margin: 1rem auto;
 			line-height: 2rem;
 			border: solid 1px #f0f0f0;
-			background: $textcolor008;
+			background: $bgcolor40;
 		    text-align: center;
 		    font-weight: 200;
 		    a{
@@ -457,31 +458,86 @@
 
 /*night start*/
 .night{
+	background: $bgcolor01-night;
+	.focus{
+		.hd{ 
+			.on{ 
+				background: $bgcolor01-night;
+			}
+		}
+	}
 	.opinion{
-		background: $textcolor008-night;
+	    background: $bgcolor18-night; 
+		border: solid 1px $bgcolor28-night;
 	    color: $textcolor007-night;
+	    &:before{
+	    	content: '';
+	        background: url('../images/icon/icon-opinion-night.png') center no-repeat;
+	        background-size: 100%;
+		    position: absolute;
+		    top: 0.3rem;
+		    left: 0.5rem;
+		    width: 0.7rem;
+		    height: 0.7rem;
+	    }
+	}
+	.themes{
+		overflow: hidden;
+		padding-bottom: 0.75rem;
+		background: $bgcolor01-night;
 	}
 	.recommend{
+		background: $bgcolor28-night;
 		li{
-		    .recommend-tit{
-			    a{
-			    	color: $textcolor008-night;
-			    }
+		    a{
+		    	color: $textcolor008-night;
 		    }
-
+		}
+	}
+	.best-travel{
+		background: $bgcolor28-night;
+		.best-item{
+			background: $bgcolor01-night;
+			border-bottom: solid 1px $bgcolor33-night;
 		}
 	}
 	.themes-box{
-		.current-tag{
-			background: $textcolor008-night;
+		background: $bgcolor01-night;
+		.head-title{
+		    border-bottom: solid 1px $bgcolor33-night;
 		}
-	}
-	.best-item{
-		background: $textcolor008-night;
+		.title{
+			@include tag-tit-night;
+		}
+		.tags-usual-box{
+		    border-bottom: solid 1px $bgcolor33-night;
+			.common-tags{
+				li{
+					border: solid 0.5px $bgcolor33-night;
+					background: $bgcolor40-night;
+				}
+			}
+		}
+		.current-tag{ 
+			border: solid 1px $bgcolor33-night;
+			background: $bgcolor40-night;
+		}
+		.tags-box{
+			.tags-list{
+				.tag{
+					border: solid 0.5px $bgcolor33-night;
+					background: $bgcolor40-night;
+				    a{
+						background: $bgcolor40-night;
+				    }
+				}
+			}
+		}
 	}
 	.best-travel,.travel-list{
 		.best-main,.travel-main{
-			.best-title,.travel-title{    
+			.best-title,.travel-title{ 
+				color: #848484;   
 				a{
 					&:visited{
 						color: $textcolor005-night;

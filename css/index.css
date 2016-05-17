@@ -99,8 +99,11 @@ legend, hr {
 a {
   outline: none; }
 
+/*night*/
 /*day*/
 /*night*/
+/*back*/
+/*bac night*/
 .wrap {
   width: 100%;
   font-size: 20px;
@@ -139,7 +142,7 @@ a {
     margin-bottom: 7.5rem; }
   .index .themes-box .tags-box .tags-title, .article-list .filter .tags-box .tags-title {
     font-size: 0.7rem;
-    color: #333; }
+    color: #333333; }
   .index .themes-box .tags-box .tags-list, .article-list .filter .tags-box .tags-list {
     width: 100%;
     max-width: initial;
@@ -154,13 +157,13 @@ a {
       margin: 0.75rem 0.5rem 0 0;
       border: solid 0.5px #dddddd;
       border-radius: 0.2rem;
-      background: #fff;
+      background: #f8f8f8;
       font-size: 0.65rem;
       color: #666666; }
       .index .themes-box .tags-box .tags-list .tag a, .article-list .filter .tags-box .tags-list .tag a {
         padding: 0.2rem 0.4rem;
         border-radius: 0.1rem;
-        background: #fff;
+        background: #f8f8f8;
         font-size: 0.65rem;
         color: #666666; }
     .index .themes-box .tags-box .tags-list .active-tag, .article-list .filter .tags-box .tags-list .active-tag {
@@ -225,11 +228,10 @@ a {
 
 /*travel-list start*/
 .travel-list {
-  background: #e4e4e4; }
+  background: #f8f8f8; }
   .travel-list .travel-item {
     padding: 0.5rem 0.75rem;
-    border-bottom: 1px solid #f0f0f0;
-    background: #fff; }
+    border-bottom: 1px solid #dddddd; }
     .travel-list .travel-item:last-child {
       border: 0; }
     .travel-list .travel-item a {
@@ -276,8 +278,28 @@ a {
 
 /*travel-list end*/
 /*night start*/
-.night .travel-list .travel-main .travel-title a:visited {
-  color: #555555; }
+.night .best-time-num li, .night .travel-time-num li {
+  border: solid 0.5px #2878db;
+  background: #4680d1;
+  opacity: 1;
+  color: #ffffff; }
+
+.night .themes-box .tags-box .tags-title, .night .filter .tags-box .tags-title {
+  font-size: 0.7rem;
+  color: #848484; }
+
+.night .themes-box .tags-box .tags-list .active-tag, .night .filter .tags-box .tags-list .active-tag {
+  border: solid 0.5px #2878db;
+  background: #4680d1;
+  opacity: 1;
+  color: #ffffff; }
+
+.night .travel-list {
+  background: #2f2f2f; }
+  .night .travel-list .travel-item {
+    border-bottom: 1px solid #252525; }
+  .night .travel-list .travel-main .travel-title a:visited {
+    color: #555555; }
 
 /*night end*/
 .wrap {
@@ -310,9 +332,9 @@ a {
     padding: 0 0.5rem 0 1.5rem;
     height: 1.4rem;
     line-height: 1.4rem;
-    border: solid 1px #e6e7e9;
+    border: solid 1px #dddddd;
     border-radius: 0.8rem;
-    background: #ffffff;
+    background: #f8f8f8;
     color: #cccccc;
     font-size: 0.65rem; }
     .wrap .opinion:before {
@@ -368,7 +390,7 @@ a {
         width: 0.25rem;
         height: 0.25rem;
         margin-top: -0.05rem;
-        background: #fff; }
+        background: #f8f8f8; }
     .wrap .focus .bd {
       position: relative;
       z-index: 0;
@@ -535,22 +557,24 @@ a {
         text-align: center; }
   .wrap .best-travel {
     overflow: hidden;
+    padding-bottom: 0.5rem;
     background: #e4e4e4; }
     .wrap .best-travel .best-item {
       padding: 0 0.75rem 0rem;
-      margin-bottom: 0.5rem;
-      background: #ffffff; }
+      border-bottom: solid 1px #dddddd;
+      background: #f8f8f8; }
       .wrap .best-travel .best-item a {
         color: #000000; }
         .wrap .best-travel .best-item a:visited {
           color: #999999; }
     .wrap .best-travel .best-main .best-img img {
-      width: 100%; }
+      overflow: hidden;
+      width: 100%;
+      height: 9.7rem; }
     .wrap .best-travel .best-main .best-title {
       line-height: 1.2rem;
       padding: 0.75rem 0;
       font-size: 0.85rem;
-      font-weight: bold;
       color: #000000; }
       .wrap .best-travel .best-main .best-title:visited {
         color: #999999; }
@@ -569,7 +593,7 @@ a {
       font-size: 0.8rem;
       color: #666666;
       text-align: center;
-      border-bottom: solid 1px #f0f0f0; }
+      border-bottom: solid 1px #dddddd; }
       .wrap .themes-box .head-title:before {
         content: '';
         background: url("../images/icon/icon-close-gray.png") no-repeat;
@@ -581,13 +605,12 @@ a {
         height: 0.6rem; }
     .wrap .themes-box .title {
       font-size: 0.7rem;
-      color: #333;
-      font-weight: bold; }
+      color: #333333; }
     .wrap .themes-box .tags-usual-box {
       overflow: auto;
       font-size: 0.8rem;
       padding: 0.5rem 0.75rem 0.5rem;
-      border-bottom: solid 1px #f0f0f0; }
+      border-bottom: solid 1px #dddddd; }
       .wrap .themes-box .tags-usual-box .common-tags, .wrap .themes-box .tags-usual-box li {
         float: left; }
       .wrap .themes-box .tags-usual-box .tags-usual-con {
@@ -602,7 +625,7 @@ a {
         margin: 0 0.5rem 0.75rem 0;
         border: solid 0.5px #dddddd;
         border-radius: 0.2rem;
-        background: #fff;
+        background: #ffffff;
         font-size: 0.65rem;
         color: #666666; }
     .wrap .themes-box .current-tag {
@@ -627,20 +650,59 @@ a {
     background-size: 100%; }
 
 /*night start*/
-.night .opinion {
-  background: #999999;
-  color: #333333; }
-
-.night .recommend li .recommend-tit a {
-  color: #999999; }
-
-.night .themes-box .current-tag {
-  background: #999999; }
-
-.night .best-item {
-  background: #999999; }
-
-.night .best-travel .best-main .best-title a:visited, .night .best-travel .best-main .travel-title a:visited, .night .best-travel .travel-main .best-title a:visited, .night .best-travel .travel-main .travel-title a:visited, .night .travel-list .best-main .best-title a:visited, .night .travel-list .best-main .travel-title a:visited, .night .travel-list .travel-main .best-title a:visited, .night .travel-list .travel-main .travel-title a:visited {
-  color: #555555; }
+.night {
+  background: #2f2f2f; }
+  .night .focus .hd .on {
+    background: #2f2f2f; }
+  .night .opinion {
+    background: #5c5c5c;
+    border: solid 1px #252525;
+    color: #333333; }
+    .night .opinion:before {
+      content: '';
+      background: url("../images/icon/icon-opinion-night.png") center no-repeat;
+      background-size: 100%;
+      position: absolute;
+      top: 0.3rem;
+      left: 0.5rem;
+      width: 0.7rem;
+      height: 0.7rem; }
+  .night .themes {
+    overflow: hidden;
+    padding-bottom: 0.75rem;
+    background: #2f2f2f; }
+  .night .recommend {
+    background: #252525; }
+    .night .recommend li a {
+      color: #999999; }
+  .night .best-travel {
+    background: #252525; }
+    .night .best-travel .best-item {
+      background: #2f2f2f;
+      border-bottom: solid 1px #252525; }
+  .night .themes-box {
+    background: #2f2f2f; }
+    .night .themes-box .head-title {
+      border-bottom: solid 1px #252525; }
+    .night .themes-box .title {
+      font-size: 0.7rem;
+      color: #848484; }
+    .night .themes-box .tags-usual-box {
+      border-bottom: solid 1px #252525; }
+      .night .themes-box .tags-usual-box .common-tags li {
+        border: solid 0.5px #252525;
+        background: #363636; }
+    .night .themes-box .current-tag {
+      border: solid 1px #252525;
+      background: #363636; }
+    .night .themes-box .tags-box .tags-list .tag {
+      border: solid 0.5px #252525;
+      background: #363636; }
+      .night .themes-box .tags-box .tags-list .tag a {
+        background: #363636; }
+  .night .best-travel .best-main .best-title, .night .best-travel .best-main .travel-title, .night .best-travel .travel-main .best-title, .night .best-travel .travel-main .travel-title, .night .travel-list .best-main .best-title, .night .travel-list .best-main .travel-title, .night .travel-list .travel-main .best-title, .night .travel-list .travel-main .travel-title {
+    color: #848484; }
+    .night .best-travel .best-main .best-title a:visited, .night .best-travel .best-main .travel-title a:visited, .night .best-travel .travel-main .best-title a:visited, .night .best-travel .travel-main .travel-title a:visited, .night .travel-list .best-main .best-title a:visited, .night .travel-list .best-main .travel-title a:visited, .night .travel-list .travel-main .best-title a:visited, .night .travel-list .travel-main .travel-title a:visited {
+      color: #555555; }
 
 /*night end*/

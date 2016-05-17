@@ -100,8 +100,11 @@ legend, hr {
 a {
   outline: none; }
 
+/*night*/
 /*day*/
 /*night*/
+/*back*/
+/*bac night*/
 .wrap {
   width: 100%;
   font-size: 20px;
@@ -140,7 +143,7 @@ a {
     margin-bottom: 7.5rem; }
   .index .themes-box .tags-box .tags-title, .article-list .filter .tags-box .tags-title {
     font-size: 0.7rem;
-    color: #333; }
+    color: #333333; }
   .index .themes-box .tags-box .tags-list, .article-list .filter .tags-box .tags-list {
     width: 100%;
     max-width: initial;
@@ -155,13 +158,13 @@ a {
       margin: 0.75rem 0.5rem 0 0;
       border: solid 0.5px #dddddd;
       border-radius: 0.2rem;
-      background: #fff;
+      background: #f8f8f8;
       font-size: 0.65rem;
       color: #666666; }
       .index .themes-box .tags-box .tags-list .tag a, .article-list .filter .tags-box .tags-list .tag a {
         padding: 0.2rem 0.4rem;
         border-radius: 0.1rem;
-        background: #fff;
+        background: #f8f8f8;
         font-size: 0.65rem;
         color: #666666; }
     .index .themes-box .tags-box .tags-list .active-tag, .article-list .filter .tags-box .tags-list .active-tag {
@@ -226,11 +229,10 @@ a {
 
 /*travel-list start*/
 .travel-list {
-  background: #e4e4e4; }
+  background: #f8f8f8; }
   .travel-list .travel-item {
     padding: 0.5rem 0.75rem;
-    border-bottom: 1px solid #f0f0f0;
-    background: #fff; }
+    border-bottom: 1px solid #dddddd; }
     .travel-list .travel-item:last-child {
       border: 0; }
     .travel-list .travel-item a {
@@ -277,8 +279,28 @@ a {
 
 /*travel-list end*/
 /*night start*/
-.night .travel-list .travel-main .travel-title a:visited {
-  color: #555555; }
+.night .best-time-num li, .night .travel-time-num li {
+  border: solid 0.5px #2878db;
+  background: #4680d1;
+  opacity: 1;
+  color: #ffffff; }
+
+.night .themes-box .tags-box .tags-title, .night .filter .tags-box .tags-title {
+  font-size: 0.7rem;
+  color: #848484; }
+
+.night .themes-box .tags-box .tags-list .active-tag, .night .filter .tags-box .tags-list .active-tag {
+  border: solid 0.5px #2878db;
+  background: #4680d1;
+  opacity: 1;
+  color: #ffffff; }
+
+.night .travel-list {
+  background: #2f2f2f; }
+  .night .travel-list .travel-item {
+    border-bottom: 1px solid #252525; }
+  .night .travel-list .travel-main .travel-title a:visited {
+    color: #555555; }
 
 /*night end*/
 .wrap {
@@ -293,11 +315,11 @@ a {
   height: 2.5rem;
   line-height: 2.5rem;
   padding: 0 0.75rem;
-  border-bottom: solid 1px #f0f0f0;
+  border-bottom: solid 1px #dddddd;
   background: #4680d1;
   font-size: 0.8rem;
   text-align: center;
-  color: #fff; }
+  color: #ffffff; }
   .head-title:before {
     content: '';
     background: url("../images/icon/icon-close-white.png") no-repeat;
@@ -321,7 +343,7 @@ a {
     margin: 0.75rem 0.5rem 0 0;
     border: solid 0.5px #dddddd;
     border-radius: 0.2rem;
-    background: #fff;
+    background: #ffffff;
     font-size: 0.65rem;
     color: #666666; }
     .tags-box .tag a {
@@ -329,7 +351,7 @@ a {
       padding: 0.2rem 0.4rem;
       border: solid 0.5px #dddddd;
       border-radius: 0.1rem;
-      background: #fff;
+      background: #ffffff;
       font-size: 0.65rem;
       color: #666666;
       border: 0; }
@@ -345,3 +367,17 @@ a {
       right: 0;
       width: 100%;
       height: 100%; }
+
+/*night start*/
+.night {
+  background: #2f2f2f; }
+  .night .head-title {
+    border-bottom: solid 1px #252525;
+    color: #ffffff; }
+  .night .tags-box .tag {
+    border: solid 0.5px #252525;
+    background: #363636; }
+    .night .tags-box .tag a {
+      background: #363636; }
+
+/*night end*/

@@ -130,6 +130,21 @@
 		hideModule();
 	})
 
+
+	//图片描述、时间、地址
+	$('.article-txt').each(function(){
+	    if(!$(this).text()){
+	      $(this).css({'padding':'0'}).next('.time-address').find('p').css({'border':'0'});
+	    }
+	})
+  
+  	$('.time-address').each(function(){
+  		if(!$(this).find('span').text()){
+	      $(this).find('p').css({'border':'0'});
+	    }
+  	})
+
+
 	//隐藏foot、mask模块
 	function showModule(module_name){
 		if(module_name == 'more'){

@@ -3,7 +3,7 @@
 @import "lib/common.scss";
 
 .wrap{
-    background: #f8f8f8;
+    background: $bgcolor01;
 }
 .head-title{
 	position: relative;
@@ -12,11 +12,11 @@
 	height: 2.5rem;
 	line-height: 2.5rem;
   	padding: 0 0.75rem;
-    border-bottom: solid 1px #f0f0f0;
-    background: $deep-blue;
+    border-bottom: solid 1px $bgcolor33;
+    background: $textcolor010;
 	font-size: 0.8rem;
     text-align: center;
-    color: #fff;
+    color: $textcolor008;
 	&:before{
         content: '';
         background: url('../images/icon/icon-close-white.png') no-repeat;
@@ -39,9 +39,9 @@
 		line-height: initial;
 	    padding: 0.4rem 0.5rem;
 	    margin: 0.75rem 0.5rem 0 0;
-		border: solid 0.5px #dddddd;
+		border: solid 0.5px $bgcolor33;
 		border-radius: 0.2rem;
-		background: #fff;
+		background: $bgcolor40;
 		font-size: $textsize002;
 		color: $textcolor004;
 	    a{
@@ -63,3 +63,22 @@
 		}
 	}
 }
+
+/*night start*/
+.night{
+	background: $bgcolor01-night;
+	.head-title{
+	    border-bottom: solid 1px $bgcolor33-night;
+	    color: $textcolor008;
+	}
+	.tags-box{
+		.tag{
+			border: solid 0.5px $bgcolor33-night;
+			background: $bgcolor40-night;
+			a{
+				background: $bgcolor40-night;
+			}
+		}
+	}
+}
+/*night end*/

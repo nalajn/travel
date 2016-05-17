@@ -99,8 +99,11 @@ legend, hr {
 a {
   outline: none; }
 
+/*night*/
 /*day*/
 /*night*/
+/*back*/
+/*bac night*/
 .wrap {
   width: 100%;
   font-size: 20px;
@@ -139,7 +142,7 @@ a {
     margin-bottom: 7.5rem; }
   .index .themes-box .tags-box .tags-title, .article-list .filter .tags-box .tags-title {
     font-size: 0.7rem;
-    color: #333; }
+    color: #333333; }
   .index .themes-box .tags-box .tags-list, .article-list .filter .tags-box .tags-list {
     width: 100%;
     max-width: initial;
@@ -154,13 +157,13 @@ a {
       margin: 0.75rem 0.5rem 0 0;
       border: solid 0.5px #dddddd;
       border-radius: 0.2rem;
-      background: #fff;
+      background: #f8f8f8;
       font-size: 0.65rem;
       color: #666666; }
       .index .themes-box .tags-box .tags-list .tag a, .article-list .filter .tags-box .tags-list .tag a {
         padding: 0.2rem 0.4rem;
         border-radius: 0.1rem;
-        background: #fff;
+        background: #f8f8f8;
         font-size: 0.65rem;
         color: #666666; }
     .index .themes-box .tags-box .tags-list .active-tag, .article-list .filter .tags-box .tags-list .active-tag {
@@ -225,11 +228,10 @@ a {
 
 /*travel-list start*/
 .travel-list {
-  background: #e4e4e4; }
+  background: #f8f8f8; }
   .travel-list .travel-item {
     padding: 0.5rem 0.75rem;
-    border-bottom: 1px solid #f0f0f0;
-    background: #fff; }
+    border-bottom: 1px solid #dddddd; }
     .travel-list .travel-item:last-child {
       border: 0; }
     .travel-list .travel-item a {
@@ -276,8 +278,28 @@ a {
 
 /*travel-list end*/
 /*night start*/
-.night .travel-list .travel-main .travel-title a:visited {
-  color: #555555; }
+.night .best-time-num li, .night .travel-time-num li {
+  border: solid 0.5px #2878db;
+  background: #4680d1;
+  opacity: 1;
+  color: #ffffff; }
+
+.night .themes-box .tags-box .tags-title, .night .filter .tags-box .tags-title {
+  font-size: 0.7rem;
+  color: #848484; }
+
+.night .themes-box .tags-box .tags-list .active-tag, .night .filter .tags-box .tags-list .active-tag {
+  border: solid 0.5px #2878db;
+  background: #4680d1;
+  opacity: 1;
+  color: #ffffff; }
+
+.night .travel-list {
+  background: #2f2f2f; }
+  .night .travel-list .travel-item {
+    border-bottom: 1px solid #252525; }
+  .night .travel-list .travel-main .travel-title a:visited {
+    color: #555555; }
 
 /*night end*/
 .hide {
@@ -302,11 +324,11 @@ a {
     padding: 0.5rem 0.75rem;
     margin-bottom: 3rem;
     font-size: 0.7rem;
-    color: #fff; }
+    color: #ffffff; }
     .wrap .head .title-bar .back-list {
       position: relative;
       padding-left: 0.8rem;
-      color: #fff; }
+      color: #ffffff; }
       .wrap .head .title-bar .back-list:before {
         content: '';
         background: url("../images/icon/icon-back.png") center no-repeat;
@@ -318,12 +340,12 @@ a {
         height: 0.7rem; }
     .wrap .head .title-bar .edit-btn, .wrap .head .title-bar .more-btn {
       float: right;
-      width: 0.6rem;
-      height: 0.7rem; }
+      width: 0.8rem;
+      height: 1rem; }
     .wrap .head .title-bar .more-btn {
       background: url("../images/icon/icon-edit.png") center no-repeat;
       background-size: 100%;
-      margin-right: 0.5rem; }
+      margin-right: 1rem; }
     .wrap .head .title-bar .edit-btn {
       background: url("../images/icon/icon-more.png") center no-repeat;
       background-size: 100%; }
@@ -372,14 +394,16 @@ a {
         width: 60%;
         color: #999999; }
       .wrap .head .item-head .author .item-time {
-        float: right; }
+        float: right;
+        padding-top: 0.1rem; }
 
 .wrap .head-hide {
   position: fixed;
   z-index: 999;
   width: 100%;
-  border-bottom: solid 1px #f0f0f0;
+  border-bottom: solid 1px #dddddd;
   background: #fff;
+  opacity: 0.95;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -387,8 +411,9 @@ a {
     position: relative;
     overflow: hidden;
     padding: 0.5rem 0.75rem 0.5rem 1.5rem;
-    font-size: 0.7rem;
-    color: #4680d1; }
+    font-size: 0.8rem;
+    color: #000000;
+    padding-left: 27%; }
     .wrap .head-hide .title-bar:before {
       content: '';
       background: url("../images/icon/icon-left.png") no-repeat;
@@ -407,20 +432,20 @@ a {
       line-height: 1rem; }
     .wrap .head-hide .title-bar .edit-btn, .wrap .head-hide .title-bar .more-btn {
       float: right;
-      width: 0.6rem;
-      height: 0.7rem;
-      margin: 0.1rem 0.4rem; }
+      width: 0.8rem;
+      height: 1rem; }
     .wrap .head-hide .title-bar .edit-btn {
       background: url("../images/icon/icon-edit-blue.png") center no-repeat;
       background-size: 100%; }
     .wrap .head-hide .title-bar .more-btn {
       background: url("../images/icon/icon-more-blue.png") center no-repeat;
-      background-size: 100%; }
+      background-size: 100%;
+      margin-right: 1rem; }
 
 .wrap .main .message-tags {
   overflow: hidden;
-  padding: 0.75rem;
-  border-bottom: solid 1px #f0f0f0;
+  padding: 0.6rem 0.75rem;
+  border-bottom: solid 1px #dddddd;
   background: #f8f8f8;
   font-size: 0.6rem;
   color: #666666; }
@@ -431,7 +456,9 @@ a {
   .wrap .main .message-tags .tags-list {
     clear: both;
     overflow: hidden;
-    height: 1.5rem; }
+    height: 1.2rem;
+    margin-left: 0.05rem;
+    max-width: initial; }
     .wrap .main .message-tags .tags-list .tag {
       float: left;
       max-width: initial;
@@ -441,6 +468,8 @@ a {
       border: solid 0.5px #2878db;
       color: #4680d1;
       font-size: 0.5rem; }
+      .wrap .main .message-tags .tags-list .tag:last-child {
+        margin-right: 0; }
 
 .wrap .main .article-box {
   line-height: 1.1rem;
@@ -448,13 +477,13 @@ a {
   font-size: 0.7rem;
   background: #f8f8f8; }
   .wrap .main .article-box .article-txt {
-    padding: 0 0.75rem 2rem;
-    line-height: 1.3rem;
-    color: #666666;
-    font-size: 0.85rem; }
+    padding: 0 0.75rem 1.25rem;
+    line-height: 1.5rem;
+    color: #4a4a4a;
+    font-size: 0.9rem; }
   .wrap .main .article-box .day-descriptions .day-item .day-title {
-    padding-top: 1rem;
-    border-top: solid 1px #f0f0f0;
+    padding-top: 0.75rem;
+    border-top: solid 1px #dddddd;
     text-align: center;
     color: #333333;
     font-size: 0.8rem;
@@ -462,8 +491,8 @@ a {
     .wrap .main .article-box .day-descriptions .day-item .day-title .day-time {
       margin-left: 0.5rem; }
   .wrap .main .article-box .day-descriptions .day-item .journey {
-    border-bottom: solid 1px #f0f0f0;
-    padding: 1rem 0; }
+    border-bottom: solid 1px #dddddd;
+    padding: 0.75rem 0; }
     .wrap .main .article-box .day-descriptions .day-item .journey:last-child {
       border: 0;
       padding-bottom: 0; }
@@ -485,12 +514,16 @@ a {
           position: absolute;
           bottom: 5%;
           right: 3%;
-          color: #999999; }
+          color: #f8f8f8; }
           .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img .btns .zan, .wrap .main .article-box .day-descriptions .day-item .journey .img-description .img .btns .comment {
             float: left;
             position: relative;
+            height: 1.5rem;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
             border-radius: 0.2rem;
-            padding: 0.3rem 0.5rem 0.3rem 1.3rem;
+            padding: 0.2rem 0.5rem 0.2rem 1.3rem;
             background: #000;
             opacity: 0.7;
             font-size: 0.6rem; }
@@ -516,10 +549,10 @@ a {
             height: 0.6rem; }
       .wrap .main .article-box .day-descriptions .day-item .journey .img-description .article-txt {
         padding: 0.75rem 0.5rem;
-        line-height: 1rem;
+        line-height: 1.1rem;
         background: #000;
-        font-size: 0.75rem;
-        color: #4a4a4a; }
+        font-size: 0.8rem;
+        color: #999999; }
       .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address {
         padding: 0 0.75rem;
         line-height: 1.5rem;
@@ -528,14 +561,14 @@ a {
         color: #666666; }
         .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address p {
           overflow: hidden;
-          border-top: solid 1px #666666; }
+          border-top: solid 1px #333333; }
         .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address .time {
           position: relative;
           float: left;
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
-          width: 48%;
+          width: 50%;
           padding-left: 0.8rem; }
           .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address .time:before {
             content: '';
@@ -553,12 +586,12 @@ a {
           -moz-box-sizing: border-box;
           box-sizing: border-box;
           padding-left: 1.2rem;
-          width: 48%;
+          width: 50%;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
           background: url("../images/icon/line.png") no-repeat;
-          background-size: 1% 80%;
+          background-size: 0.3% 80%;
           background-position: left; }
           .wrap .main .article-box .day-descriptions .day-item .journey .img-description .time-address .address:before {
             content: '';
@@ -581,80 +614,122 @@ a {
 .wrap .foot {
   position: fixed;
   bottom: -100%;
-  width: 100%;
-  background: #fff;
-  opacity: 0.9; }
-  .wrap .foot .more-list dl {
-    line-height: 2.5rem;
-    font-size: 0.8rem;
-    color: #333333; }
-  .wrap .foot .more-list dt {
-    font-size: 0.8rem;
-    font-weight: 200; }
-    .wrap .foot .more-list dt a {
+  width: 100%; }
+  .wrap .foot .more-list {
+    height: 12.7rem;
+    overflow: auto;
+    background: #ffffff;
+    opacity: 0.9; }
+    .wrap .foot .more-list dl {
+      line-height: 2.25rem;
+      font-size: 0.8rem;
+      color: #000000; }
+    .wrap .foot .more-list dt {
+      font-size: 0.8rem;
+      font-weight: 200; }
+      .wrap .foot .more-list dt a {
+        display: inline-block;
+        width: 100%;
+        color: #000000; }
+    .wrap .foot .more-list .active {
+      position: relative; }
+      .wrap .foot .more-list .active a {
+        color: #4680d1; }
+      .wrap .foot .more-list .active:before {
+        content: '';
+        background: url("../images/icon/icon-right.png") no-repeat;
+        background-size: 60%;
+        position: absolute;
+        top: 40%;
+        right: 0.5rem;
+        width: 1.3rem;
+        height: 0.7rem; }
+    .wrap .foot .more-list dt, .wrap .foot .more-list dd {
+      border-bottom: solid 1px #dddddd;
+      padding: 0 1rem;
+      overflow: hidden;
+      height: 2.25rem;
+      line-height: 2.25rem;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
+    .wrap .foot .more-list a {
       display: inline-block;
-      width: 100%;
-      color: #333333; }
-  .wrap .foot .more-list .active {
-    position: relative; }
-    .wrap .foot .more-list .active a {
-      color: #4680d1; }
-    .wrap .foot .more-list .active:before {
-      content: '';
-      background: url("../images/icon/icon-right.png") no-repeat;
-      background-size: 60%;
-      position: absolute;
-      top: 34%;
-      right: 0.5rem;
-      width: 1.3rem;
-      height: 0.7rem; }
-  .wrap .foot .more-list dt, .wrap .foot .more-list dd {
-    border-bottom: solid 1px #f0f0f0;
-    padding: 0 1rem;
-    overflow: hidden;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    white-space: nowrap;
-    text-overflow: ellipsis; }
-  .wrap .foot .more-list a {
-    display: inline-block;
-    width: 96%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: #666666; }
-  .wrap .foot .more-list em {
-    margin-right: 0.5rem; }
+      width: 93%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: #000000; }
+    .wrap .foot .more-list em {
+      margin-right: 0.5rem; }
   .wrap .foot .edit-list {
-    line-height: 2rem;
+    line-height: 2.25rem;
     font-size: 0.7rem;
-    color: #656565;
+    background: #ffffff;
+    opacity: 0.9;
+    color: #000000;
+    font-size: 0.85rem;
     text-align: center; }
     .wrap .foot .edit-list li {
-      border-bottom: solid 1px #f0f0f0; }
+      border-bottom: solid 1px #dddddd; }
   .wrap .foot .cancel {
-    line-height: 2rem;
+    line-height: 2.25rem;
     text-align: center;
+    background: #dddddd;
     color: #4680d1;
     font-size: 0.85rem; }
 
 /*night start*/
-.night .head .item-head .author .author-name {
+.night .head .title-bar {
+  color: #999999; }
+  .night .head .title-bar .back-list {
+    color: #999999; }
+
+.night .head .item-head .author .author-name, .night .head .item-head .author .recommend-tag, .night .head .item-head .author .item-time {
   color: #999999; }
 
-.night .head .item-head .author .recommend-tag, .night .head .item-head .author .item-time {
-  color: #444444; }
+.night .head-hide {
+  border-bottom: solid 1px #252525;
+  background: #363636; }
+  .night .head-hide .title-bar {
+    color: #eeeeee; }
 
-.night .main .article-box .day-descriptions .day-item .day-title {
-  color: #848484; }
+.night .main .message-tags {
+  border-bottom: solid 1px #252525;
+  background: #2f2f2f; }
 
-.night .main .article-box .day-descriptions .day-item .journey .img-description .article-txt {
-  color: #848484; }
+.night .main .article-box {
+  background: #2f2f2f; }
+  .night .main .article-box .article-txt {
+    color: #848484; }
+  .night .main .article-box .day-descriptions .day-item .day-title {
+    border-top: solid 1px #252525;
+    color: #848484; }
+  .night .main .article-box .day-descriptions .day-item .journey {
+    border-bottom: solid 1px #252525; }
+    .night .main .article-box .day-descriptions .day-item .journey .img-description .article-txt {
+      color: #555555; }
+    .night .main .article-box .day-descriptions .day-item .journey .img-description .time-address p {
+      overflow: hidden;
+      border-top: solid 1px #252525; }
 
-.night .foot .more-list dl {
-  color: #848484; }
+.night .foot .more-list {
+  background: #363636; }
+  .night .foot .more-list dl {
+    color: #eeeeee; }
+  .night .foot .more-list dt a {
+    color: #eeeeee; }
+  .night .foot .more-list dt, .night .foot .more-list dd {
+    border-bottom: solid 1px #252525; }
+  .night .foot .more-list a {
+    color: #eeeeee; }
 
-.night .foot .more-list dt a {
-  color: #848484; }
+.night .foot .edit-list {
+  background: #363636;
+  color: #eeeeee; }
+  .night .foot .edit-list li {
+    border-bottom: solid 1px #252525; }
+
+.night .foot .cancel {
+  background: #252525; }
 
 /*night end*/

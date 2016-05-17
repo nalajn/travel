@@ -16,11 +16,11 @@
     width: 100%;
     height: 0;
     overflow: hidden;
-    background: #fff;
+    background: $bgcolor40;
 	.head-title,.filter-tag{
 		line-height: 2.5rem;
 	    background: $deep-blue;
-	    color: #fff;
+	    color: $textcolor008;
 	}
 	.head-title{ 
 		position: relative;
@@ -44,7 +44,7 @@
 	.selected{
 		overflow: hidden;
 	    line-height: 2.5rem;
-	    border-bottom: solid 1px #f0f0f0;
+	    border-bottom: solid 1px $bgcolor33;
 	    padding: 0 0.75rem;
 	    margin-bottom: 0.75rem;
 		font-size: 0.7rem;
@@ -61,7 +61,7 @@
 			a{
 				display: inline-block;
 				width: 100%;
-				color: #666;
+				color: $textcolor004;
 			}
 			&:after{
 		        content: '';
@@ -80,12 +80,12 @@
 		bottom: 0.75rem;
 		left: 4%;
 		width: 92%;
-		line-height: 2rem;
+		line-height: 2.25rem;
 		border-radius: 0.1rem;
 		background: #2878db;
 		font-size: 0.8rem;
 		text-align: center;
-		color: #f8f8f8;
+		color: $bgcolor01;
 		&:after{
 	        content: '';
 	        background: url('../images/icon/icon-right-white.png') no-repeat;
@@ -96,6 +96,17 @@
 		    width: 0.5rem;
 		    height: 0.8rem;
 	    }
+	}
+	.tags-box{
+		.tags-list{
+			.tag{
+				border: solid 0.5px $bgcolor33;
+				background: $bgcolor01;
+			    a{
+					background: $bgcolor01;
+			    }
+			}
+		}
 	}
 	// .tags-box{
 	// 	overflow: hidden;
@@ -144,3 +155,35 @@
 	// }
 }
 /*filter end*/
+
+/*night*/
+.night{
+	.filter{
+	    background: $bgcolor40-night;
+		// .head-title,.filter-tag{
+		//     color: $textcolor008-night;
+		// }
+		.selected{
+		    border-bottom: solid 1px $bgcolor33-night;
+		}
+		// .total{
+		// 	color: $bgcolor01-night;
+		// }
+		.tags-box{
+			.tags-list{
+				.tag{
+					border: solid 0.5px $bgcolor33-night;
+					background: $bgcolor01-night;
+				    a{
+						background: $bgcolor01-night;
+				    }
+				}
+				.active-tag{
+					@include active-tag-night;
+				}
+			}
+		}
+	}
+}
+/*filter end*/
+
