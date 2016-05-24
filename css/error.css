@@ -1,0 +1,313 @@
+@charset "UTF-8";
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight: transparent;
+  -webkit-text-size-adjust: none;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Microsoft YaHei", Arial, "Hiragino Sans GB W3", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif; }
+
+/*body {font-size: 0.75em;}*/
+label {
+  cursor: pointer; }
+
+a:link, a:visited {
+  text-decoration: none; }
+
+input:focus {
+  outline: none; }
+
+input, button, select, textarea {
+  outline: none;
+  /*-webkit-appearance:none;*/
+  /*强制去除表单自带的样式*/ }
+
+textarea {
+  resize: none;
+  /*-webkit-appearance:none;*/
+  /*强制去除textarea自带的样式*/ }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset; }
+
+/*利用阴影来填充掉input自动填充色*/
+textarea, input, select {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0; }
+
+a, abbr, acronym, address, applet, article, aside, audio, b, blockquote, big, body, center, canvas, caption, cite, code, command, datalist, dd, del, details, dfn, dl, div, dt, em, embed, fieldset, figcaption, figure, font, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, keygen, label, legend, li, meter, nav, menu, object, ol, output, p, pre, progress, q, s, samp, section, small, span, source, strike, strong, sub, sup, table, tbody, tfoot, thead, th, tr, tdvideo, tt, u, ul, var {
+  margin: 0;
+  padding: 0; }
+
+article, aside, footer, header, hgroup, nav, section, figure, figcaption {
+  display: block; }
+
+/*html5设置*/
+h1, h2, h3, h4, h5, h6, th, td, table, input, button, select, textarea, sub {
+  font-size: 1em; }
+
+body, input, button, select, textarea, sub {
+  font-family: Arial, sans-serif; }
+
+em, cite, address, optgroup {
+  font-style: normal; }
+
+kbd, samp, code {
+  font-family: monospace; }
+
+img, input, button, select, textarea {
+  vertical-align: middle;
+  outline: none; }
+
+ul, ol {
+  list-style: none; }
+
+img, fieldset {
+  border: 0; }
+
+abbr, acronym {
+  cursor: help;
+  border-bottom: 1px dotted #000; }
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border: 0; }
+
+table th, table td {
+  border: 0; }
+
+legend, hr {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/*legend,hr,caption {visibility: hidden;font-size: 0;width: 0;height: 0;line-height: 0;}*/
+.hidden {
+  display: none; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  clear: both; }
+
+a {
+  outline: none; }
+
+/*night*/
+/*day*/
+/*night*/
+/*back*/
+/*bac night*/
+.wrap {
+  width: 100%;
+  font-size: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.overflow {
+  overflow: hidden; }
+
+.hide {
+  display: none; }
+
+.tags-list {
+  float: left;
+  overflow: hidden;
+  max-width: 9rem;
+  height: 0.9rem; }
+  .tags-list li {
+    overflow: hidden;
+    float: left;
+    max-width: 0.9rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    padding: 0.05rem;
+    margin-right: 0.5rem;
+    border-radius: 0.1rem;
+    text-align: center;
+    font-size: 0.45rem;
+    color: #4680d1; }
+
+.index .themes-box .tags-box, .article-list .filter .tags-box {
+  overflow: hidden;
+  padding: 0 0.75rem 0.75rem; }
+  .index .themes-box .tags-box:last-child, .article-list .filter .tags-box:last-child {
+    margin-bottom: 7.5rem; }
+  .index .themes-box .tags-box .tags-title, .article-list .filter .tags-box .tags-title {
+    font-size: 0.7rem;
+    color: #333333; }
+  .index .themes-box .tags-box .tags-list, .article-list .filter .tags-box .tags-list {
+    width: 100%;
+    max-width: initial;
+    height: initial; }
+    .index .themes-box .tags-box .tags-list .tag, .article-list .filter .tags-box .tags-list .tag {
+      position: relative;
+      float: left;
+      max-width: initial;
+      height: 0.95rem;
+      line-height: 1rem;
+      padding: 0.4rem 0.5rem;
+      margin: 0.75rem 0.5rem 0 0;
+      border: solid 0.5px #dddddd;
+      border-radius: 0.2rem;
+      background: #f8f8f8;
+      font-size: 0.65rem;
+      color: #666666; }
+      .index .themes-box .tags-box .tags-list .tag a, .article-list .filter .tags-box .tags-list .tag a {
+        padding: 0.2rem 0.4rem;
+        border-radius: 0.1rem;
+        background: #f8f8f8;
+        font-size: 0.65rem;
+        color: #666666; }
+    .index .themes-box .tags-box .tags-list .active-tag, .article-list .filter .tags-box .tags-list .active-tag {
+      border: solid 0.5px #2878db;
+      color: #4680d1; }
+      .index .themes-box .tags-box .tags-list .active-tag:before, .article-list .filter .tags-box .tags-list .active-tag:before {
+        content: '';
+        background: #006aff;
+        opacity: 0.08;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%; }
+
+.current-tag {
+  line-height: 2.5rem;
+  padding: 0 0.75rem;
+  background: #4680d1;
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 200; }
+  .current-tag:after {
+    content: '';
+    background: url("../images/icon/icon-down.png") center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    top: 3.5%;
+    right: 0.75rem;
+    width: 0.7rem;
+    height: 0.7rem; }
+
+.best-time-num, .travel-time-num {
+  position: relative;
+  overflow: hidden;
+  font-size: 0.6rem;
+  color: #999999; }
+  .best-time-num .best-time, .best-time-num .travel-time, .travel-time-num .best-time, .travel-time-num .travel-time {
+    float: left;
+    margin: 0.1rem 0.5rem 0 0; }
+  .best-time-num .best-num, .best-time-num .travel-num, .travel-time-num .best-num, .travel-time-num .travel-num {
+    position: absolute;
+    right: 0; }
+  .best-time-num li, .travel-time-num li {
+    border: solid 0.5px #2878db;
+    color: #4680d1; }
+
+.best-time-num {
+  padding: 0.5rem 0; }
+  .best-time-num .tags-list li {
+    max-width: initial; }
+
+.travel-time-num {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 0.61rem; }
+  .travel-time-num .tags-list {
+    max-width: 4.6rem; }
+    .travel-time-num .tags-list li {
+      max-width: 1.8rem; }
+
+/*travel-list start*/
+.travel-list {
+  background: #f8f8f8; }
+  .travel-list .travel-item {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #dddddd; }
+    .travel-list .travel-item:last-child {
+      border: 0; }
+    .travel-list .travel-item a {
+      color: #666666; }
+      .travel-list .travel-item a:visited {
+        color: #999999; }
+  .travel-list .travel-main {
+    position: relative;
+    overflow: hidden; }
+    .travel-list .travel-main .travel-img {
+      overflow: hidden;
+      float: left;
+      width: 4.5rem;
+      height: 3.4rem;
+      margin-right: 0.5rem; }
+      .travel-list .travel-main .travel-img img {
+        width: 100%; }
+    .travel-list .travel-main .travel-title, .travel-list .travel-main .travel-time-num {
+      float: left;
+      width: 12.2rem; }
+    .travel-list .travel-main .travel-title {
+      line-height: 1rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      font-size: 0.85rem;
+      color: #000000; }
+      .travel-list .travel-main .travel-title:visited {
+        color: #999999; }
+
+@media screen and (max-width: 320px) {
+  .travel-time-num .tags-list {
+    max-width: 4.6rem; }
+    .travel-time-num .tags-list li {
+      max-width: 1.5rem; } }
+
+@media screen and (min-width: 375px) and (max-width: 435px) {
+  .travel-time-num .tags-list {
+    max-width: 4.8rem; }
+    .travel-time-num .tags-list li {
+      max-width: 1.9rem; } }
+
+/*travel-list end*/
+/*night start*/
+.night .best-time-num li, .night .travel-time-num li {
+  border: solid 0.5px #2878db; }
+
+.night .themes-box .tags-box .tags-title, .night .filter .tags-box .tags-title {
+  font-size: 0.7rem;
+  color: #848484; }
+
+.night .travel-list {
+  background: #2f2f2f; }
+  .night .travel-list .travel-item {
+    border-bottom: 1px solid #252525; }
+  .night .travel-list .travel-main .travel-title a:visited {
+    color: #555555; }
+
+/*night end*/
+.wrap {
+  overflow: hidden;
+  background: #f8f8f8; }
+  .wrap img {
+    width: 7rem;
+    display: block;
+    margin: 0 auto;
+    margin-top: 7.5rem; }
+  .wrap p {
+    margin-top: 1rem;
+    color: #999999;
+    font-size: 0.75rem;
+    text-align: center; }
+
+.night {
+  background: #2f2f2f; }
+  .night p {
+    color: #555555; }

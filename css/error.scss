@@ -1,0 +1,26 @@
+@charset "utf-8";
+@import "lib/common";
+
+.wrap{
+    overflow: hidden;
+    background: $bgcolor01;
+    img{
+    	width: 7rem;
+	    display: block;
+	    margin: 0 auto;
+	    margin-top: 7.5rem;
+    }
+    p{
+    	margin-top: 1rem;
+    	color: $textcolor005;
+    	font-size: $textsize004;
+    	text-align: center;
+    }
+}
+
+.night{
+    background: $bgcolor01-night;
+    p{
+    	color: $textcolor005-night;
+    }
+}

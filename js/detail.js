@@ -90,12 +90,12 @@
 		}else{
 			$('.mask,.foot,.edit-list,.cancel').removeClass('hide').animate({bottom:"0"});
 		}
-		$('.wrap').height($(window).height()).addClass('overflow');
+		$('body').height($(window).height()).addClass('overflow');
 	}
 	//显示foot、mask模块
 	function hideModule(){
 		$('.mask,.foot,.more-list,.edit-list,.cancel').animate({bottom:"-100%"}).addClass('hide');
-		$('.wrap').removeClass('overflow').removeAttr('style');
+		$('body').removeClass('overflow').removeAttr('style');
 	}
 
 

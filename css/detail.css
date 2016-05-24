@@ -597,6 +597,7 @@ a {
 .wrap .mask {
   position: fixed;
   top: 0;
+  z-index: 99;
   width: 100%;
   height: 100%;
   background: #000;
@@ -605,7 +606,8 @@ a {
 .wrap .foot {
   position: fixed;
   bottom: -100%;
-  width: 100%; }
+  width: 100%;
+  z-index: 999; }
   .wrap .foot .more-list {
     height: 12.7rem;
     overflow: auto;

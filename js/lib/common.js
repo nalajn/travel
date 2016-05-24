@@ -12,6 +12,8 @@
   // 	$('.tags-list li').eq(i).css({'border':'solid 1px'});
   // } 
 
+  $('.error').height($(window).height());
+
   //rem适配
   function adapt() {
       (function (doc, win) {
