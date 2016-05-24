@@ -357,6 +357,29 @@ a {
   color: #666666;
   text-align: center; }
 
+.wrap .nothing img {
+  width: 5rem;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2.5rem; }
+
+.wrap .nothing .title {
+  margin: 1.15rem 0 2.4rem;
+  text-align: center;
+  color: #666666;
+  font-size: 0.8rem; }
+
+.wrap .nothing .write {
+  width: 92%;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  margin: 0 auto;
+  border-radius: 0.2rem;
+  background: #4680d1;
+  color: #ffffff;
+  font-size: 0.85rem;
+  text-align: center; }
+
 /*night start*/
 .night .personal_article-list li {
   background: #999999; }
@@ -364,5 +387,8 @@ a {
     color: #eeeeee; }
   .night .personal_article-list li .time, .night .personal_article-list li .comment {
     color: #555555; }
+
+.night .nothing .write {
+  color: #999999; }
 
 /*night end*/

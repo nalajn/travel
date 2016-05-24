@@ -76,6 +76,31 @@
 		color: $textcolor004;
 		text-align: center;
 	}
+	.nothing{
+		img{
+			width: 5rem;
+		    display: block;
+		    margin: 0 auto;
+		    margin-top: 2.5rem;
+		}
+		.title{
+			margin: 1.15rem 0 2.4rem;
+    		text-align: center;
+			color: $textcolor004;
+			font-size: $textsize005;
+		}
+		.write{
+			width: 92%;
+			height: 2.25rem;
+			line-height: 2.25rem;
+			margin: 0 auto;
+			border-radius: 0.2rem;
+			background: $deep-blue;
+			color: $textcolor008;
+			font-size: $textsize006;
+			text-align: center;
+		}
+	}
 }
 /*night start*/
 .night{
@@ -88,6 +113,11 @@
 			.time,.comment{
 				color: $textcolor005-night;
 			}
+		}
+	}
+	.nothing{
+		.write{
+			color: $textcolor008-night;
 		}
 	}
 }
