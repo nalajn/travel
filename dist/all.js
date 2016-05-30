@@ -115,6 +115,7 @@
 		hideModule();
 
 		//滚动到相应位置
+		
         var hr = $(this).find('a').attr("data-href");
         var anh = $(hr).offset().top-140;
         $('body').scrollTop(anh);
